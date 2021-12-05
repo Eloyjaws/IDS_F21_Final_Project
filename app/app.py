@@ -15,7 +15,7 @@ sys.path.append("..")
 # Use Wide Page Format
 # st.set_page_config(layout="wide")
 
-logo = Image.open("world.png")
+logo = Image.open("images/world.png")
 st.image(
     logo,
     width=100,
