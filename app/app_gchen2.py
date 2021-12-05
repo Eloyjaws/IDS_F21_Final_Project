@@ -60,14 +60,11 @@ job_plot.set_title("Productivity Comparison", fontsize=40)
 
 st.pyplot(fig)
 
-
-
 # Facebook Social Connectedness
 components.html("""
-    <div class="flourish-embed flourish-globe" data-src="visualisation/7988652">
+    <div class="flourish-embed flourish-globe" data-src="visualisation/8038403">
     <script src="https://public.flourish.studio/resources/embed.js">
-    </script>
-    </div>
+    </script></div>
 """, height=600)
 
 # Friends/Relatives to Count on
