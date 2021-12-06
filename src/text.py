@@ -98,6 +98,74 @@ social_connectednes_blurb_two = """
         the entire world can connect with someone living in a different continent with just one click.
     """
 
+social_media_maus_blurb = """
+"""
+
+social_media_young_users_blurb = """
+"""
+
+social_media_gender_blurb = """
+"""
+
+loneliness_self_reported_blurb = """
+        As previously mentioned, loneliness can be immensely detrimental to an individual’s 
+        overall well-being. An argument has recently been made about an ongoing loneliness 
+        pandemic, and we aim to gauge the situation in our following analysis.
+
+        One of the major ways to examine the seriousness of an unhealthy mental state such 
+        as loneliness is by using surveys. Our first dataset we explored the self-reported 
+        loneliness among older individuals in a number of European countries and the US. 
+        As shown in the visualization, the prevalence of loneliness varies significantly 
+        among the surveyed countries: Denmark’s reported share of loneliness is as low as 
+        25%, while the number in Greece reaches a staggering 62%. The wide gap also notes 
+        that the problem of loneliness may not be solely tied to economic development since 
+        all surveyed countries are developed economies. An elementary conclusion from the 
+        above analysis is that the prevalence of loneliness is likely to be country and 
+        culture specific.
+    """
+
+loneliness_friends_relative_blurb = """
+        Besides the direct self-report provided above, we have also found tangential evidence 
+        regarding loneliness. In a 2016 cross-country survey, participants were asked whether 
+        they have close friends or relatives they can count on when participants are in need. 
+        In a certain perspective, the question is effectively asking whether the participant 
+        has strong social connections and is probably not lonely. As we can see from the map, 
+        Ireland has the max share of 98.3% while South Korea has min share of 75.9%, and 
+        both are developed countries. We can also observe that among developing countries, 
+        South Africa has a decently high share of 88.3% and Mexico has a low share of 80.1%. 
+        These observations further detach states of economic development from the loneliness problem.
+    """
+
+loneliness_single_person_household_impact_blurb_one = """
+        Share of single-person households has been suggested as a factor related to loneliness. 
+        To explore this problem, we combined data provided by OurWorld and WorldBank to generate 
+        the visualization of GDP per capita vs Share of One-Person Households. Since GDP per capita 
+        for most countries grows as time progresses, the X-axis can also be viewed as an axis of time 
+        (non-linear scale). Examining the trend over the world and for each continent, we can observe 
+        that the share of single-person households grows as GDP per capita increases.
+    """
+
+loneliness_single_person_household_impact_blurb_two = """
+        Does more single-person households lead to more feelings of loneliness? Based on our previous 
+        analysis, economic states do not correlate well with the prevalence of loneliness, but there is 
+        an obvious correlation between wealth and share of one person households. Denmark, whose elder 
+        population reported the least share of loneliness, has as many as 45% of one-person households. 
+        So our conclusion as of now is that the correlation is difficult to draw between loneliness and 
+        share of single-person households. For example, the rapid rise in single-person households may be 
+        attributed to people being wealthy enough to live in single-person rather than living alone causes 
+        loneliness (or vice versa). Also, it is worth pointing out that being alone and loneliness are two 
+        different things, which is out of the scope of this project.
+
+        The more complex interaction among single-person household share, GDP per capita, sufficiency of 
+        mental health facilities, and many more factors may be able to predict the level of loneliness for 
+        any given entity using machine learning. However, we believe it is clear that our data is insufficient 
+        to perform such analysis.
+
+        And there has been debate about whether social media can counterintuitively lead to the problem of 
+        loneliness. According to our research, a more appropriate question should be how much social media 
+        usage leads to increased feelings of loneliness.
+    """
+
 Conclusion = """
                 Insert Conclusion Here
             """

@@ -174,7 +174,29 @@ elif content_choice == "Rise of Social Media":
 
 elif content_choice == "Loneliness":
     # display relevant content
-    st.write(content_choice)
+    # st.write(content_choice)
+    st.header("Social Isolation & Loneliness")
+
+    # Loneliness
+    st.write(text.loneliness_self_reported_blurb)
+    components.html(
+        '<div class="flourish-embed flourish-map" data-src="visualisation/7985093"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
+    # Friends/Relatives to Count on
+    st.header('Factors Impacting Social Isolation & loneliness')
+    st.subheader('Close Friends & Relatives')
+    with st.expander('Click to view insight'):
+        st.write(text.loneliness_friends_relative_blurb)
+        components.html(
+            '<div class="flourish-embed flourish-map" data-src="visualisation/7989899"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
+    # One-Person Household
+    st.subheader('One-Person Household, GDP per Capita & Increasing Loneliness')
+    with st.expander('Click to view insight'):
+        st.write(text.loneliness_single_person_household_impact_blurb_one)
+        components.html(
+            '<div class="flourish-embed flourish-scatter" data-src="visualisation/7991020"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+        st.write(text.loneliness_single_person_household_impact_blurb_two)
 
 elif content_choice == "Conclusion":
     # display relevant content
