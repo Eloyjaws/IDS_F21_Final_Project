@@ -41,11 +41,12 @@ if content_choice == "Intro":
     st.image(title_img)
     st.title("Social Connections & the Internet")
     st.markdown(text.Introduction, unsafe_allow_html=True)
-
+    
 elif content_choice == "Social Connections":
     # display relevant content
     st.header("How Important are Social Connections for our health?")
     st.markdown(text.social_connections_blurb_one, unsafe_allow_html=True)
+    st.video("https://www.youtube.com/watch?v=8KkKuTCFvzI")
     st.write(text.social_connections_blurb_two)
     happiness_image = Image.open(ROOT_DIR.joinpath("images/happiness-and-friends.png"))
     st.image(happiness_image)
