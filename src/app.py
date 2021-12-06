@@ -14,12 +14,15 @@ import pandas as pd
 import text
 import plots
 import utils
+from pathlib import Path
 # from utils import get_productivity_countries_list, get_productivity_data
 
 # Use Wide Page Format
 # st.set_page_config(layout="wide")
 
-logo = Image.open("images/world.png")
+ROOT_DIR = Path(__file__).parent.parent.resolve()
+
+logo = Image.open(ROOT_DIR.joinpath("images/world.png"))
 st.image(
     logo,
     width=100,
@@ -40,7 +43,7 @@ show_loneliness_stats = st.sidebar.checkbox("Loneliness Statistics", True)
 
 if show_social_connections:
     st.subheader("How Important are Social Connections for our health?")
-    happiness_image = Image.open("images/happiness-and-friends.png")
+    happiness_image = Image.open(ROOT_DIR.joinpath("images/happiness-and-friends.png"))
     st.image(happiness_image)
 
     # Facebook Social Connectedness
