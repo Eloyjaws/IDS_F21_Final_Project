@@ -101,7 +101,7 @@ elif content_choice == "Internet: Trends and Impacts":
     components.html(
         '<div class="flourish-embed" data-src="story/1056561"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=750)
 
-    st.subheader('Internet Usage Ranking by Countries')
+    st.subheader('Internet Usage Trends')
     # with st.expander('Internet Users in Millions'):
     #     components.html(
     #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016698"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
@@ -142,7 +142,6 @@ elif content_choice == "Internet: Trends and Impacts":
 
 elif content_choice == "Rise of Social Media":
     # display relevant content
-    st.write(content_choice)
     st.header('Rise of Social Media - Trends and Stats')
 
     # Facebook Social Connectedness
@@ -164,10 +163,9 @@ elif content_choice == "Rise of Social Media":
     components.html(
         '<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/8030229"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=650)
 
-    st.subheader("Online Social Networking Trends amongst Young Users")
     st.write(text.social_media_young_users_blurb)
     components.html(
-        '<div class="flourish-embed flourish-chart" data-src="visualisation/8015401"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+        '<div class="flourish-embed flourish-chart" data-src="visualisation/8015401"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
 
     # Social Media Usage by Gender Distribution
     st.subheader("Usage of Social Media Platforms by Gender Distribution")

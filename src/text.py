@@ -120,15 +120,16 @@ internet_inclusivity_index = """
         other things) in 120 countries.
 
         Select 5 countries of choice to see their internet inclusivity scores.
-"""
+        """
 
 social_connectednes_blurb_one = """
         The saying that “the world is more connected than ever before” holds true thanks to the power 
         of social media being able to connect literally anyone with anyone on the internet. 
-        Recently released Facebook data explores social connectedness index (SCI) between countries. 
-        This index measures the strength of connectedness between two geographic areas as represented 
-        by Facebook friendship ties. For two locations i and j the index is calculated as below:
-    """
+        Recently released Facebook data explores connectedness between countries through the Social 
+        Connectedness Index (SCI). This index measures the strength of connectedness between two 
+        geographic areas as represented by Facebook friendship ties. For two locations i and j the 
+        index is calculated as below:
+        """
 
 social_connectednes_blurb_two = """
         The index shows how much the overall population in both countries are connected between each 
@@ -137,16 +138,33 @@ social_connectednes_blurb_two = """
         are Isle of Man, Jersey, Ireland, Cayman Islands, and Grenada, while the US didn’t even make 
         it to the top-20 list. Despite the bias, it is still striking to see how easily people from 
         the entire world can connect with someone living in a different continent with just one click.
-    """
+        """
 
 social_media_maus_blurb = """
-"""
+        Over a 16 year period between 2002 to 2018, the world has witnessed an exponential increase in 
+        active users of online social networking platforms from 3 miillion monthly activer users (MAU) to 9.1 
+        billion monthly active users in 2018. The MAU at 2018 is 1.2 times the world population as of 2020. 
+        This signifies that multiple users are engaging on more than one social media platform, implying that 
+        more people have increasingly sought online social connections and relations over time to curb 
+        loneliness, maintain great professional networks and overall boost their different aspects of their 
+        lives including psychological and career parts.
+        """
 
 social_media_young_users_blurb = """
-"""
+        We also observe that more than 85% of the young population (14 - 24 years) in most European countries 
+        have adopted online social networking by 2014. This adoption can be attributed to humans' psychological 
+        need to connect with other humans, perhaps in a bid to curb loneliness and isolation.
+        """
 
 social_media_gender_blurb = """
-"""
+        Additionally, in exploring social connections amongst people, we take a look at the level of usage of
+        different social media platforms across the two main different gender types in the U.S in 2019. 
+        We observe that male users are significantly higher than the female users and the reverse case for 
+        other social media platforms. For instance, in 2019, there were more significantly male users 
+        recorded on Reddit and Youtube, as compared to female users. Also, there were significantly more female
+        users on Pinteresy, Facebook and Instagram. We might be able to attribute the dominance to different job
+        types predominant amongst the different gender.
+        """
 
 loneliness_self_reported_blurb = """
         As previously mentioned, loneliness can be immensely detrimental to an individual’s 
