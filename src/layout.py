@@ -31,8 +31,7 @@ content_choice = st.sidebar.radio(
         "Internet: Trends and Impacts",
         "Rise of Social Media",
         "Loneliness",
-        "Conclusion",
-        "References"
+        "Conclusion"
     ])
 
 if content_choice == "Intro":
@@ -174,7 +173,6 @@ elif content_choice == "Rise of Social Media":
 
 elif content_choice == "Loneliness":
     # display relevant content
-    # st.write(content_choice)
     st.header("Social Isolation & Loneliness")
 
     # Loneliness
@@ -200,8 +198,11 @@ elif content_choice == "Loneliness":
 
 elif content_choice == "Conclusion":
     # display relevant content
-    st.write(content_choice)
+    # st.write(content_choice)
+    st.header("Conclusion")
+    st.write(text.Conclusion)
 
-elif content_choice == "References":
-    # display relevant content
-    st.write(content_choice)
+    with st.expander("References"):
+        st.markdown(text.References, unsafe_allow_html=True)
+
+st.sidebar.markdown(text.Footer, unsafe_allow_html=True)

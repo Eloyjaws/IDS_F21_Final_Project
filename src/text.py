@@ -167,8 +167,29 @@ loneliness_single_person_household_impact_blurb_two = """
     """
 
 Conclusion = """
-                Insert Conclusion Here
-            """
+        We have found social connection is vitally important to any individuals’ 
+        health and wellness. Beyond an individual level, social connection contributes 
+        to the productivity and economic development of its corresponding country or 
+        political entity. On the other hand, loneliness, which is detrimental to individuals’ 
+        health, appears to be related to culture and economic status.
+
+        The rise of internet connection and subsequent rise of social media platforms 
+        have affected the lives of the majority of the population throughout the world 
+        and have changed the way people interact with each other. The effects are most 
+        evident in the younger generation, who spend more time on digital devices.
+
+        Despite the media buzz about the negative impact of social media on mental 
+        health and loneliness, we have found the claim to be weakly supported. A more 
+        profound and obvious impact is the extent to which social media has lowered 
+        the cost of communication and enables easier maintenance of social relationships 
+        across countries. The effects of social media are amplified by the Covid pandemic 
+        that makes in-person social interaction more difficult than ever before.
+
+        Social media has the potential to become an even bigger game changer to benefit 
+        people’s social well-being, and we would like to call for platforms and users 
+        alike to promote healthy habits of using social media.
+
+    """
 
 References = """
                 - Internet and Social media Logo obtained from https://www.flaticon.com/premium-icon/world_2274428
