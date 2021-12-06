@@ -30,7 +30,7 @@ content_choice = st.sidebar.radio(
         "Social Connections",
         "Internet: Trends and Impacts",
         "Rise of Social Media",
-        "Loneliness, Covid-19, and More",
+        "Loneliness",
         "Conclusion",
         "References"
     ])
@@ -101,7 +101,7 @@ elif content_choice == "Internet: Trends and Impacts":
     components.html(
         '<div class="flourish-embed" data-src="story/1056561"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=750)
 
-    st.subheader('Internet Users Ranking by Countries')
+    st.subheader('Internet Usage Ranking by Countries')
     with st.expander('Internet Users in Millions'):
         components.html(
         '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016698"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
@@ -119,6 +119,14 @@ elif content_choice == "Internet: Trends and Impacts":
         components.html(
         '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016831"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
+    with st.expander("Daily time spent on the Internet by young people, 2016"):
+        components.html(
+            '<div class="flourish-embed flourish-chart" data-src="visualisation/8040725"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
+    with st.expander("Daily Hours spent with digital Media, United States, 2008 - 2018"):
+        components.html(
+            '<div class="flourish-embed flourish-chart" data-src="visualisation/8040586"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
     st.subheader('Is there a Relationship between Internet User Population and GNI per capital of countries?')
     with st.expander('Click to read more on Internet User Population and GNI per capital of countries?'):
         components.html(
@@ -132,8 +140,39 @@ elif content_choice == "Internet: Trends and Impacts":
 elif content_choice == "Rise of Social Media":
     # display relevant content
     st.write(content_choice)
+    st.header('Rise of Social Media - Trends and Stats')
 
-elif content_choice == "Loneliness, Covid-19, and More":
+    # Facebook Social Connectedness
+    st.subheader('Facebook Connected Index')
+    st.write(text.social_connectednes_blurb_one)
+    st.latex(r'''
+        Social\ Connectedness_{i,j} = \frac{FB\_Connections_{i,j}}{FB\_Users_i * FB\_Users_j}
+    ''')
+    st.latex(r'''FB\_Users_i\ and\ FB\_Users_j\ are\ number\ of\ Facebook\ users\ in\ locations\ i\ and\ j''')
+    st.latex(r'''FB\_Connections_{i,j}\ is\ the\ number\ of\ connections\ between\ the\ two\ locations''')
+    components.html(
+        '<div class="flourish-embed flourish-globe" data-src="visualisation/8038403"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=650)
+    st.write(text.social_connectednes_blurb_two)
+    
+
+    # MAU for Social Media Platform (2002 - 2018)
+    st.subheader("Online Social Networking Trends amongst Young Users")
+    st.write(text.social_media_maus_blurb)
+    components.html(
+        '<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/8030229"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=650)
+
+    st.subheader("Online Social Networking Trends amongst Young Users")
+    st.write(text.social_media_young_users_blurb)
+    components.html(
+        '<div class="flourish-embed flourish-chart" data-src="visualisation/8015401"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
+    # Social Media Usage by Gender Distribution
+    st.subheader("Usage of Social Media Platforms by Gender Distribution")
+    st.write(text.social_media_gender_blurb)
+    components.html(
+        '<div class="flourish-embed flourish-chart" data-src="visualisation/8016063"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
+elif content_choice == "Loneliness":
     # display relevant content
     st.write(content_choice)
 

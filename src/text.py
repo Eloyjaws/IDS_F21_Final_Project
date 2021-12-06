@@ -24,7 +24,7 @@ Introduction = """
                 </div>
             """
 
-social_connections_paragraph_one = """
+social_connections_blurb_one = """
         <div>
             <p>
                 The adult development study at Harvard University is a longitudinal 
@@ -41,7 +41,7 @@ social_connections_paragraph_one = """
         </div>
         """
 
-social_connections_paragraph_two = """
+social_connections_blurb_two = """
         The positive effects of healthy social connection is eminently illustrated by the 
         cross-country survey conducted by the World Value Survey. In the 4th wave of the 
         survey study, participants were asked a series of questions regarding their values, 
@@ -51,7 +51,7 @@ social_connections_paragraph_two = """
         those who have rare social activities.
         """
 
-social_connections_paragraph_three = """
+social_connections_blurb_three = """
         Aside from the effects on happiness, social interaction also has impacts on people’s 
         professional career. As shown in the visualization, as many as 91% of job seekers utilize 
         their social relationships with friends, relatives, trade unions, and so on to seek 
@@ -64,7 +64,7 @@ social_connections_paragraph_three = """
         demonstrates it is still the most important pillar for job search.
         """
 
-social_connections_paragraph_four = """
+social_connections_blurb_four = """
         Social connections not only help people get employed but also have a healthy economic 
         impact called knowledge spillover, where individuals with different expertise and backgrounds 
         exchange information and ideas leading to innovation and productivity growth. The concept of 
@@ -81,6 +81,23 @@ internet_inclusivity_index = """
         other things) in 120 countries.
 """
 
+social_connectednes_blurb_one = """
+        The saying that “the world is more connected than ever before” holds true thanks to the power 
+        of social media being able to connect literally anyone with anyone on the internet. 
+        Recently released Facebook data explores social connectedness index (SCI) between countries. 
+        This index measures the strength of connectedness between two geographic areas as represented 
+        by Facebook friendship ties. For two locations i and j the index is calculated as below:
+    """
+
+social_connectednes_blurb_two = """
+        The index shows how much the overall population in both countries are connected between each 
+        other. As we look into the data, SCI seems to assign higher SCI to political entities with 
+        less population. For example, the 5 entities most connected with people in the United Kingdom 
+        are Isle of Man, Jersey, Ireland, Cayman Islands, and Grenada, while the US didn’t even make 
+        it to the top-20 list. Despite the bias, it is still striking to see how easily people from 
+        the entire world can connect with someone living in a different continent with just one click.
+    """
+
 Conclusion = """
                 Insert Conclusion Here
             """
@@ -88,7 +105,7 @@ Conclusion = """
 References = """
                 - Internet and Social media Logo obtained from https://www.flaticon.com/premium-icon/world_2274428
                 
-                - Ref 2
+                - Facebook's Social Connectedness Index from https://dataforgood.facebook.com/dfg/docs/methodology-social-connectedness-index
 
                 - Ref 3
             """
