@@ -75,10 +75,42 @@ social_connections_blurb_four = """
         its rapid productivity growth.
         """
 
+internet_daily_time_spent = """
+        By 2016, the young population featuring ages between 14 and 24 in European countries now spend
+        a daily average of 3 - 6 hours on the internet with more than half of European countries spending
+        a daily minimum of 4 hours hours. From the social media insight in the next section, we observe 
+        more social media platforms have emerged by 2016 with also 8 billion monthly active users.
+        We can safely conclude that the increased time spent on the internet is directly influenced 
+        by the increase in MAUs of social media platforms. We should also note that increased social 
+        media MAUs implies increase in social and human connections.
+        """
+
+digital_media_time_spent = """
+        In the United State, over 10 years, there has been increase in the amount of time spent 
+        on mobile devices from a daily average of 0.3 hours in 2008 and 3.6 hours in 2018. 
+        The increased usage of digital devices especially with mobile devices can be traced to 
+        increased content on the internet, relative availability, amongst other factors.
+        """
+
+internet_usage_gni = """
+        To better understand the factors influencing the population of interner user per country, 
+        we explored the countries' GNI per capita and internet users population over 4 years (2017 - 2021).
+        We found a trend amongst the countries with 4 distinct buckets. The High income countries mostly 
+        had 70% - 99% of their population using the internet, Middle income (upper and lower) countries
+        had between 40% - 85% internet users of total popualation whilst Low income countries had 
+        between 2% and 30% of their total population using the internet. We interpreted that GNI per 
+        capita of countries have some role to play in accessibility and availability of internet 
+        especially in low income countries. Due to the overlap in between the Upper-middle income 
+        countries and some high income countries, we postulate that there are under factors that 
+        influence internet availability and high number of internet users.
+        """
+
 internet_inclusivity_index = """
         We explore how inclusive the internet is based on Price, Availability, Affordability, Quality, 
         Relevance of internet content and Readiness (which covers policies in adopting internet amongst 
         other things) in 120 countries.
+
+        Select 5 countries of choice to see their internet inclusivity scores.
 """
 
 social_connectednes_blurb_one = """
