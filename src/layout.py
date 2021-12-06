@@ -45,24 +45,24 @@ if content_choice == "Intro":
 elif content_choice == "Social Connections":
     # display relevant content
     st.header("How Important are Social Connections for our health?")
-    st.markdown(text.social_connections_paragraph_one, unsafe_allow_html=True)
-    st.write(text.social_connections_paragraph_two)
+    st.markdown(text.social_connections_blurb_one, unsafe_allow_html=True)
+    st.write(text.social_connections_blurb_two)
     happiness_image = Image.open(ROOT_DIR.joinpath("images/happiness-and-friends.png"))
     st.image(happiness_image)
 
     st.subheader('Impact of Connections on Job Seeking')
-    st.write(text.social_connections_paragraph_three)
+    st.write(text.social_connections_blurb_three)
     with st.expander('Click to view insights on Impact of Connections on Job Seeking'):
         components.html(
             '<div class="flourish-embed flourish-chart" data-src="visualisation/8037091"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
         # EU
         components.html(
-            '<div class="flourish-embed flourish-map" data-src="visualisation/7985810"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+            '<div class="flourish-embed flourish-map" data-src="visualisation/7985810"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=550)
 
     # Productivity # TODO: What has this got to do with our work?
     st.subheader('Impact of Connections on Productivity')
-    st.write(text.social_connections_paragraph_four)
+    st.write(text.social_connections_blurb_four)
     with st.expander('Click to view insights on Impact of Connections on Productivity'):
         components.html(
             '<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/7987034"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
@@ -101,32 +101,35 @@ elif content_choice == "Internet: Trends and Impacts":
         '<div class="flourish-embed" data-src="story/1056561"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=750)
 
     st.subheader('Internet Usage Ranking by Countries')
-    with st.expander('Internet Users in Millions'):
-        components.html(
-        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016698"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
-        components.html(
-        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016738"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
-    with st.expander('Internet Users by Share of Population'):
-        components.html(
-        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016719"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
-        components.html(
-        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016758"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+    # with st.expander('Internet Users in Millions'):
+    #     components.html(
+    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016698"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+    #     components.html(
+    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016738"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+    # with st.expander('Internet Users by Share of Population'):
+    #     components.html(
+    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016719"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+    #     components.html(
+    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016758"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
-    with st.expander('Offline Statistics'):
-        components.html(
-        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016773"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
-        components.html(
-        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016831"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+    # with st.expander('Offline Statistics'):
+    #     components.html(
+    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016773"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+    #     components.html(
+    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016831"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
-    with st.expander("Daily time spent on the Internet by young people, 2016"):
+    with st.expander("Click for insight on Daily time spent on the Internet by young people, 2016"):
+        st.write(text.internet_daily_time_spent)
         components.html(
             '<div class="flourish-embed flourish-chart" data-src="visualisation/8040725"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
-    with st.expander("Daily Hours spent with digital Media, United States, 2008 - 2018"):
+    with st.expander("Click for insight on Daily Hours spent with digital Media, United States, 2008 - 2018"):
+        st.write(text.digital_media_time_spent)
         components.html(
             '<div class="flourish-embed flourish-chart" data-src="visualisation/8040586"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
     st.subheader('Is there a Relationship between Internet User Population and GNI per capital of countries?')
+    st.write(text.internet_usage_gni)
     with st.expander('Click to read more on Internet User Population and GNI per capital of countries?'):
         components.html(
         '<div class="flourish-embed flourish-scatter" data-src="visualisation/8020581"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
