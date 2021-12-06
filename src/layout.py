@@ -10,6 +10,8 @@ import seaborn as sns
 from PIL import Image
 
 import text
+import plots
+import utils
 
 
 # Base heading for side bar
@@ -30,7 +32,54 @@ if content_choice == "Intro":
 
 elif content_choice == "Social Connections":
     # display relevant content
-    st.write(content_choice)
+    st.header("How Important are Social Connections for our health?")
+    st.markdown(text.social_connections_paragraph_one, unsafe_allow_html=True)
+    st.write(text.social_connections_paragraph_two)
+    happiness_image = Image.open("images/happiness-and-friends.png")
+    st.image(happiness_image)
+
+    st.subheader('Impact of Connections on Job Seeking')
+    st.write(text.social_connections_paragraph_three)
+    with st.expander('Click to view insights on Impact of Connections on Job Seeking'):
+        components.html(
+            '<div class="flourish-embed flourish-chart" data-src="visualisation/8037091"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
+        # EU
+        components.html(
+            '<div class="flourish-embed flourish-map" data-src="visualisation/7985810"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
+    # Productivity # TODO: What has this got to do with our work?
+    st.subheader('Impact of Connections on Productivity')
+    st.write(text.social_connections_paragraph_four)
+    with st.expander('Click to view insights on Impact of Connections on Productivity'):
+        components.html(
+            '<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/7987034"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
+        # Static Comparison of Productivity
+        selected_entities = st.multiselect(
+            label="Select interested economic entities for comparison",
+            options=utils.get_productivity_countries_list(),
+            default=["United States", "Japan", "South Africa", "Australia", "China", "Spain", "Brazil"]
+        )
+
+        # Fetch Data
+        productivity_data = utils.get_productivity_data()
+        productivity_df = productivity_data.copy()
+
+        if selected_entities:
+            productivity_filtered = productivity_df[productivity_df["Entity"].isin(selected_entities)].rename(columns={"Productivity (PWT 9.1 (2019))":"Productivity"})
+            productivity_plot = plots.lineplot(
+                productivity_filtered,
+                'Year',
+                'Productivity',
+                'Year',
+                'GDP per hour work ($)',
+                'Entity',
+                ['Entity', 'Year', 'Code', 'Productivity'],
+                'Productivity Comparison Amongst Countries',
+            )
+
+            st.altair_chart(productivity_plot, use_container_width=True)
 
 elif content_choice == "Rise of Internet":
     # display relevant content
