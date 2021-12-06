@@ -16,8 +16,8 @@ Several sources have shown that Billions of people are going online to stay in t
 </p>
 
 To do this we first sought to answer several questions:
-1. What are the Top Countries where ?
-2. What are the ?
+1. What are the top countries where social connections are healthiest?
+2. What are the countries whose population spent most time online or on social media?
 3. What are the differences ?
 4. Which Countries have the ?
 5. How important are social connections?
