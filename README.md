@@ -2,7 +2,7 @@
 Interactive Data Science Project - Fall 2021
 ## Goals
 
-The goal for this project was to identify and present the ...
+The goal for this project was to present the importance of social connections and the rise of social media before identifying the impact of internet on social connections.
 
 Several sources have shown that Billions of people are going online to stay in touch during the COVID-19 pandemic, but almost half of the world’s population has no access to the internet.
 
@@ -20,7 +20,11 @@ To do this we first sought to answer several questions:
 2. What are the ?
 3. What are the differences ?
 4. Which Countries have the ?
-5. Q5 ?
+5. How important are social connections?
+6. What are the share of population in each country that socialize using social media?
+7. Does social media and other internet features affect our social connections? If so, how and how much?
+8. What are some of the factors related to healthy/unhealthy social connection?
+9. How much does social media affect someone's mental health and feelings of loneliness?
 
 We performed some Exploratory Data Analysis to answer these initial questions but obtained more insights along the way. They are presented in our [Streamlit App](https://share.streamlit.io/)
 
@@ -33,6 +37,12 @@ We used a combination of multiple datasets:
 https://theinclusiveinternet.eiu.com/
 
 - OWID
+- OurWorld, short for Our World in Data, is a project of the Global Change Data Lab based in UK. The project and, more specifically, its contents about social connections and loneliness give a good overview of the subject, while providing datasets and rudimentary visualizations. 
+https://ourworldindata.org/social-connections-and-loneliness
+- Facebook Social Connectedness Index, created by Facebook in an attempt to better understand the friendship established via Facebook across countries.
+https://data.humdata.org/dataset/social-connectedness-index?fbclid=IwAR1PrPZhf8_4Qr0tjQJ8dbRoFNaYdlbCsaakGD_RGeO8kmbu-Ke4Fg5KCJ8
+- 
+
 
 
 ### Tasks
@@ -40,13 +50,14 @@ https://theinclusiveinternet.eiu.com/
 ## Logistics
 ### Time spent: 
   - Rukayat: ~K Hours
-  - Timur: ~K hours
+  - Timur: ~27 hours
   - Eniola: ~K Hours
 
 ### Aspects that took the most time:
-  - Finding useful datasets
+  - Finding and focus on a topic that have sufficient data and not overdone
   - Logistics
-
+  - Finding useful datasets
+  - Building a coherent narrative and writing them down
 
 ### Aspects that suprisingly took the least time:
   - 
