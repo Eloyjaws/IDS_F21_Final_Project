@@ -35,7 +35,7 @@ social_connections_blurb_one = """
                 The adult development study at Harvard University is a longitudinal 
                 research project that has been going on for 80 years. The study 
                 tracks the life and health of 456 disadvantaged males growing up 
-                in Boston from 1940 to 1945.<br>
+                in Boston from 1940 to 1945.<br><br>
                 One of the most important observations is that good relationships 
                 keep people happy and healthy. Watch Robert Waldinger, the current director
                 of the study, vividly describe the significance of good social 
@@ -48,7 +48,9 @@ social_connections_blurb_two = """
         The positive effects of healthy social connection is eminently illustrated by the 
         cross-country survey conducted by the World Value Survey. In the 4th wave of the 
         survey study, participants were asked a series of questions regarding their values, 
-        habits, and social/professional status. In a cross-country comparison carried out by 
+        habits, and social/professional status.
+        
+        In a cross-country comparison carried out by 
         OurWorld, it examined the effect of frequency of social interactions on happiness and 
         found people who have more frequent social interactions are generally happier than 
         those who have rare social activities.
@@ -59,7 +61,9 @@ social_connections_blurb_three = """
         professional career. As shown in the visualization, as many as 91% of job seekers utilize 
         their social relationships with friends, relatives, trade unions, and so on to seek 
         employment. Although the survey was conducted in 2005, the high proportion of people relying 
-        on social connections demonstrated the popularity of the method. In another survey conducted 
+        on social connections demonstrated the popularity of the method. 
+        
+        In another survey conducted 
         for job searches in the United States in 2015, more than 65% relies on close friends or 
         family, more than 50% uses their professional or work connections, and over 55% relies on 
         acquaintances or friends-of-friends. Despite “online resources and information” is now taking 
@@ -70,7 +74,9 @@ social_connections_blurb_three = """
 social_connections_blurb_four = """
         Social connections not only help people get employed but also have a healthy economic 
         impact called knowledge spillover, where individuals with different expertise and backgrounds 
-        exchange information and ideas leading to innovation and productivity growth. The concept of 
+        exchange information and ideas leading to innovation and productivity growth. 
+        
+        The concept of 
         knowledge spillover has been noted as one of the main reasons for the coupling of economic 
         growth and increasing urbanization, where more educated individuals are living in close 
         proximity with each other and free to socialize. As shown on the visualization, countries 
