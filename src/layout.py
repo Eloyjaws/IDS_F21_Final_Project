@@ -16,14 +16,24 @@ import utils
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).parent.parent.resolve()
+# Use Wide Page Format
+# st.set_page_config(layout="wide")
 
 # Base heading for side bar
 sidebar_img = Image.open(ROOT_DIR.joinpath("images/connections_sidebar.jpg"))
 st.sidebar.image(sidebar_img)
 st.sidebar.title("Social Connections & the Internet")
 
-content_choice = st.sidebar.radio("Menu", \
-    ["Intro", "Social Connections", "Rise of Internet", "Rise of Social Media", "Loneliness, Covid-19, and More", "Conclusion", "References"])
+content_choice = st.sidebar.radio(
+    "Menu", [
+        "Intro",
+        "Social Connections",
+        "Internet: Trends and Impacts",
+        "Rise of Social Media",
+        "Loneliness, Covid-19, and More",
+        "Conclusion",
+        "References"
+    ])
 
 if content_choice == "Intro":
     # display relevant content
@@ -84,34 +94,40 @@ elif content_choice == "Social Connections":
 
             st.altair_chart(productivity_plot, use_container_width=True)
 
-elif content_choice == "Rise of Internet":
+elif content_choice == "Internet: Trends and Impacts":
     # display relevant content
-    st.header('Internet Trends and Impacts')
-    st.subheader("The Internet - usage across the world; A brief story")
+    # st.header('Internet: Trends and Impacts')
+    st.header("The Internet usage across the world - A brief story")
     components.html(
-        '<div class="flourish-embed" data-src="story/1056561"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-    
+        '<div class="flourish-embed" data-src="story/1056561"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=750)
+
+    st.subheader('Internet Users Ranking by Countries')
+    with st.expander('Internet Users in Millions'):
+        components.html(
+        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016698"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+        components.html(
+        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016738"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+    with st.expander('Internet Users by Share of Population'):
+        components.html(
+        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016719"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+        components.html(
+        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016758"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
+    with st.expander('Offline Statistics'):
+        components.html(
+        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016773"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+        components.html(
+        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016831"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
     st.subheader('Is there a Relationship between Internet User Population and GNI per capital of countries?')
     with st.expander('Click to read more on Internet User Population and GNI per capital of countries?'):
         components.html(
-        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8020581"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8020581"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
     
-    st.subheader('Internet Users Ranking by Countries')
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016698"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016738"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016719"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016758"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-
-    st.subheader('Offline Statistics')
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016773"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016831"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+    st.subheader('Is the Internet usage really Inclusive?')
+    st.write(text.internet_inclusivity_index)
+    with st.expander('Insert 3i plot here. Select 5 countries to view their internet inclusivity score'):
+        st.write('Insert plot here')
 
 elif content_choice == "Rise of Social Media":
     # display relevant content

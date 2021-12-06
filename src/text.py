@@ -75,6 +75,12 @@ social_connections_paragraph_four = """
         its rapid productivity growth.
         """
 
+internet_inclusivity_index = """
+        We explore how inclusive the internet is based on Price, Availability, Affordability, Quality, 
+        Relevance of internet content and Readiness (which covers policies in adopting internet amongst 
+        other things) in 120 countries.
+"""
+
 Conclusion = """
                 Insert Conclusion Here
             """
