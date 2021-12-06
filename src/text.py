@@ -250,7 +250,13 @@ References = """
                 
                 - Facebook's Social Connectedness Index from https://dataforgood.facebook.com/dfg/docs/methodology-social-connectedness-index
 
-                - Ref 3
+                - OurWorld's data and visualizations from https://ourworldindata.org/social-connections-and-loneliness
+
+                - Social Media / Screen time stats from https://www.comparitech.com/tv-streaming/screen-time-statistics/
+
+                - Knowledge Spillover from https://www.sciencedirect.com/science/article/pii/S0040162521000925
+
+                
             """
 
 Footer = """ <style>
