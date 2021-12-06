@@ -200,6 +200,13 @@ elif content_choice == "Loneliness":
             '<div class="flourish-embed flourish-scatter" data-src="visualisation/7991020"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
         st.write(text.loneliness_single_person_household_impact_blurb_two)
 
+    # Impacts of Social Media
+    st.subheader('Social Media Usage & Loneliness and Happiness')
+    with st.expander('Click to view insight'):
+        st.write(text.loneliness_social_media_blurb)
+        smt_happy_img = Image.open(ROOT_DIR.joinpath("images/social_media_time_happy.png"))
+        st.image(smt_happy_img)
+
 elif content_choice == "Conclusion":
     # display relevant content
     # st.write(content_choice)
