@@ -13,6 +13,17 @@ Questions = """
                 6. Is ?
             """
 
+Introduction = """
+                <style>.intro{font-size: 20px}</style>
+                <div class="intro">
+                    In this project, we aim to explore the topic of social connections along with the 
+                    impacts and effects of internet usage. It has long been known that social well-being 
+                    is essential for people’s mental and physical health. A prevalent feeling of 
+                    loneliness can be immensely detrimental, affecting not only individuals’ mood but 
+                    also the physiology at the cellular level.
+                </div>
+            """
+
 Conclusion = """
                 Insert Conclusion Here
             """
