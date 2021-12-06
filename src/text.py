@@ -17,10 +17,15 @@ Introduction = """
                 <style>.intro{font-size: 20px}</style>
                 <div class="intro">
                     In this project, we aim to explore the topic of social connections along with the 
-                    impacts and effects of internet usage. It has long been known that social well-being 
+                    effects of internet usage. <br><br>
+                    It has long been known that social well-being 
                     is essential for people’s mental and physical health. A prevalent feeling of 
                     loneliness can be immensely detrimental, affecting not only individuals’ mood but 
-                    also the physiology at the cellular level.
+                    also the physiology at the cellular level. <br><br>
+                    In the meantime, recent studies have estimated that the average American spends 
+                    over seven hours looking at screen, and more than 2 hours are spent using social 
+                    media. Social media and other internet functionalities have become one of the 
+                    most important ways for us to maintain and expand our social connections.
                 </div>
             """
 
@@ -34,9 +39,7 @@ social_connections_blurb_one = """
                 One of the most important observations is that good relationships 
                 keep people happy and healthy. Watch Robert Waldinger, the current director
                 of the study, vividly describe the significance of good social 
-                connections in one of the most watched TED talks: 
-                <a href='https://www.youtube.com/watch?v=8KkKuTCFvzI' target='_blank'>Robert Waldinger: What makes a good life? Lessons from the longest study on happiness | TED - YouTube</a> .
-                &nbsp;
+                connections: 
             </p>
         </div>
         """
