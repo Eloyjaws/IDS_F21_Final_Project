@@ -1,4 +1,5 @@
 import sys
+# from src.app import ROOT_DIR
 sys.path.append("..")
 
 import streamlit as st
@@ -12,10 +13,12 @@ from PIL import Image
 import text
 import plots
 import utils
+from pathlib import Path
 
+ROOT_DIR = Path(__file__).parent.parent.resolve()
 
 # Base heading for side bar
-sidebar_img = Image.open("images/connections_sidebar.jpg")
+sidebar_img = Image.open(ROOT_DIR.joinpath("images/connections_sidebar.jpg"))
 st.sidebar.image(sidebar_img)
 st.sidebar.title("Social Connections & the Internet")
 
@@ -25,7 +28,7 @@ content_choice = st.sidebar.radio("Menu", \
 if content_choice == "Intro":
     # display relevant content
     # Base heading for main page
-    title_img = Image.open("images/connections_title.jpg")
+    title_img = Image.open(ROOT_DIR.joinpath("images/connections_title.jpg"))
     st.image(title_img)
     st.title("Social Connections & the Internet")
     st.markdown(text.Introduction, unsafe_allow_html=True)
@@ -35,7 +38,7 @@ elif content_choice == "Social Connections":
     st.header("How Important are Social Connections for our health?")
     st.markdown(text.social_connections_paragraph_one, unsafe_allow_html=True)
     st.write(text.social_connections_paragraph_two)
-    happiness_image = Image.open("images/happiness-and-friends.png")
+    happiness_image = Image.open(ROOT_DIR.joinpath("images/happiness-and-friends.png"))
     st.image(happiness_image)
 
     st.subheader('Impact of Connections on Job Seeking')
