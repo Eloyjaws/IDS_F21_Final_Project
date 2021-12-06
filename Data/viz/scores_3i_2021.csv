@@ -1,0 +1,721 @@
+Country,Internet_3i_metric,Internet_3i_score
+Algeria,Price,81.1
+Angola,Price,78.3
+Argentina,Price,87.8
+Australia,Price,99.6
+Austria,Price,93.6
+Azerbaijan,Price,87.4
+Bahrain,Price,92.2
+Bangladesh,Price,83.1
+Belgium,Price,99.6
+Benin,Price,72.3
+Botswana,Price,90.0
+Brazil,Price,88.5
+Bulgaria,Price,88.3
+Burkina Faso,Price,69.2
+Burundi,Price,45.7
+Cambodia,Price,82.0
+Cameroon,Price,79.7
+Canada,Price,95.4
+Chile,Price,90.5
+China,Price,90.2
+Colombia,Price,86.7
+Congo (DRC),Price,45.2
+Costa Rica,Price,89.1
+Cote d'Ivoire,Price,74.9
+Croatia,Price,87.2
+Cuba,Price,84.5
+Czech Republic,Price,93.0
+Denmark,Price,91.1
+Dominican Republic,Price,88.2
+Ecuador,Price,85.4
+Egypt,Price,86.3
+El Salvador,Price,83.3
+Estonia,Price,94.2
+Ethiopia,Price,71.8
+Finland,Price,94.7
+France,Price,95.9
+Gabon,Price,84.0
+Germany,Price,93.1
+Ghana,Price,82.2
+Greece,Price,92.0
+Guatemala,Price,82.9
+Guinea,Price,75.9
+Honduras,Price,75.4
+Hong Kong,Price,95.8
+Hungary,Price,91.7
+India,Price,88.2
+Indonesia,Price,82.9
+Iran,Price,82.3
+Ireland,Price,98.5
+Israel,Price,92.7
+Italy,Price,95.5
+Jamaica,Price,87.3
+Japan,Price,95.9
+Jordan,Price,81.8
+Kazakhstan,Price,89.3
+Kenya,Price,77.9
+Kuwait,Price,94.0
+Laos,Price,83.2
+Latvia,Price,90.8
+Lebanon,Price,87.5
+Liberia,Price,48.0
+Lithuania,Price,91.2
+Madagascar,Price,57.3
+Malawi,Price,61.7
+Malaysia,Price,85.0
+Mali,Price,70.7
+Mexico,Price,92.2
+Mongolia,Price,79.0
+Morocco,Price,85.9
+Mozambique,Price,72.8
+Myanmar,Price,82.7
+Namibia,Price,82.7
+Nepal,Price,73.9
+Netherlands,Price,93.7
+New Zealand,Price,97.9
+Nicaragua,Price,77.2
+Niger,Price,61.4
+Nigeria,Price,84.5
+Oman,Price,90.8
+Pakistan,Price,80.3
+Panama,Price,91.1
+Papua New Guinea,Price,79.1
+Paraguay,Price,85.5
+Peru,Price,88.1
+Philippines,Price,84.7
+Poland,Price,91.9
+Portugal,Price,92.5
+Qatar,Price,99.5
+Romania,Price,91.3
+Russia,Price,92.9
+Rwanda,Price,55.3
+Saudi Arabia,Price,85.3
+Senegal,Price,79.8
+Sierra Leone,Price,59.0
+Singapore,Price,99.8
+Slovakia,Price,91.2
+South Africa,Price,88.7
+South Korea,Price,91.6
+Spain,Price,94.2
+Sri Lanka,Price,85.9
+Sudan,Price,72.9
+Sweden,Price,92.7
+Switzerland,Price,95.7
+Taiwan,Price,88.3
+Tanzania,Price,78.2
+Thailand,Price,87.5
+Trinidad & Tobago,Price,87.8
+Tunisia,Price,82.8
+Turkey,Price,85.4
+UAE,Price,95.4
+Uganda,Price,74.5
+Ukraine,Price,82.8
+United Kingdom,Price,98.0
+United States,Price,99.4
+Uruguay,Price,92.5
+Uzbekistan,Price,72.2
+Venezuela,Price,85.0
+Vietnam,Price,81.7
+Zambia,Price,77.6
+Zimbabwe,Price,60.6
+Algeria,AVAILABILITY,58.0
+Angola,AVAILABILITY,30.8
+Argentina,AVAILABILITY,71.3
+Australia,AVAILABILITY,79.7
+Austria,AVAILABILITY,78.4
+Azerbaijan,AVAILABILITY,69.7
+Bahrain,AVAILABILITY,72.8
+Bangladesh,AVAILABILITY,53.7
+Belgium,AVAILABILITY,78.8
+Benin,AVAILABILITY,32.3
+Botswana,AVAILABILITY,48.6
+Brazil,AVAILABILITY,71.2
+Bulgaria,AVAILABILITY,76.5
+Burkina Faso,AVAILABILITY,30.0
+Burundi,AVAILABILITY,26.1
+Cambodia,AVAILABILITY,57.4
+Cameroon,AVAILABILITY,42.6
+Canada,AVAILABILITY,80.2
+Chile,AVAILABILITY,72.8
+China,AVAILABILITY,76.8
+Colombia,AVAILABILITY,66.5
+Congo (DRC),AVAILABILITY,18.7
+Costa Rica,AVAILABILITY,69.7
+Cote d'Ivoire,AVAILABILITY,49.9
+Croatia,AVAILABILITY,70.4
+Cuba,AVAILABILITY,49.4
+Czech Republic,AVAILABILITY,78.5
+Denmark,AVAILABILITY,84.3
+Dominican Republic,AVAILABILITY,60.8
+Ecuador,AVAILABILITY,62.6
+Egypt,AVAILABILITY,62.4
+El Salvador,AVAILABILITY,58.8
+Estonia,AVAILABILITY,74.6
+Ethiopia,AVAILABILITY,34.4
+Finland,AVAILABILITY,77.8
+France,AVAILABILITY,78.9
+Gabon,AVAILABILITY,53.9
+Germany,AVAILABILITY,78.8
+Ghana,AVAILABILITY,55.2
+Greece,AVAILABILITY,74.6
+Guatemala,AVAILABILITY,54.0
+Guinea,AVAILABILITY,31.4
+Honduras,AVAILABILITY,49.1
+Hong Kong,AVAILABILITY,86.9
+Hungary,AVAILABILITY,75.2
+India,AVAILABILITY,59.0
+Indonesia,AVAILABILITY,67.0
+Iran,AVAILABILITY,67.1
+Ireland,AVAILABILITY,73.4
+Israel,AVAILABILITY,74.9
+Italy,AVAILABILITY,74.7
+Jamaica,AVAILABILITY,66.6
+Japan,AVAILABILITY,79.2
+Jordan,AVAILABILITY,66.3
+Kazakhstan,AVAILABILITY,66.7
+Kenya,AVAILABILITY,56.4
+Kuwait,AVAILABILITY,76.7
+Laos,AVAILABILITY,53.3
+Latvia,AVAILABILITY,78.1
+Lebanon,AVAILABILITY,62.6
+Liberia,AVAILABILITY,24.2
+Lithuania,AVAILABILITY,80.9
+Madagascar,AVAILABILITY,33.3
+Malawi,AVAILABILITY,31.1
+Malaysia,AVAILABILITY,71.5
+Mali,AVAILABILITY,37.6
+Mexico,AVAILABILITY,66.9
+Mongolia,AVAILABILITY,61.4
+Morocco,AVAILABILITY,68.5
+Mozambique,AVAILABILITY,32.0
+Myanmar,AVAILABILITY,52.2
+Namibia,AVAILABILITY,44.2
+Nepal,AVAILABILITY,54.9
+Netherlands,AVAILABILITY,83.3
+New Zealand,AVAILABILITY,83.5
+Nicaragua,AVAILABILITY,53.7
+Niger,AVAILABILITY,19.3
+Nigeria,AVAILABILITY,46.3
+Oman,AVAILABILITY,73.4
+Pakistan,AVAILABILITY,47.0
+Panama,AVAILABILITY,64.9
+Papua New Guinea,AVAILABILITY,40.8
+Paraguay,AVAILABILITY,60.9
+Peru,AVAILABILITY,61.0
+Philippines,AVAILABILITY,66.9
+Poland,AVAILABILITY,76.3
+Portugal,AVAILABILITY,75.9
+Qatar,AVAILABILITY,79.0
+Romania,AVAILABILITY,78.1
+Russia,AVAILABILITY,72.2
+Rwanda,AVAILABILITY,44.5
+Saudi Arabia,AVAILABILITY,73.1
+Senegal,AVAILABILITY,48.6
+Sierra Leone,AVAILABILITY,28.9
+Singapore,AVAILABILITY,87.3
+Slovakia,AVAILABILITY,76.4
+South Africa,AVAILABILITY,68.6
+South Korea,AVAILABILITY,86.9
+Spain,AVAILABILITY,79.7
+Sri Lanka,AVAILABILITY,61.7
+Sudan,AVAILABILITY,32.2
+Sweden,AVAILABILITY,83.9
+Switzerland,AVAILABILITY,85.5
+Taiwan,AVAILABILITY,81.5
+Tanzania,AVAILABILITY,32.5
+Thailand,AVAILABILITY,76.4
+Trinidad & Tobago,AVAILABILITY,72.8
+Tunisia,AVAILABILITY,63.2
+Turkey,AVAILABILITY,70.2
+UAE,AVAILABILITY,81.3
+Uganda,AVAILABILITY,39.4
+Ukraine,AVAILABILITY,68.4
+United Kingdom,AVAILABILITY,79.6
+United States,AVAILABILITY,80.8
+Uruguay,AVAILABILITY,70.2
+Uzbekistan,AVAILABILITY,59.1
+Venezuela,AVAILABILITY,57.1
+Vietnam,AVAILABILITY,69.1
+Zambia,AVAILABILITY,37.5
+Zimbabwe,AVAILABILITY,48.0
+Algeria,AFFORDABILITY,61.3
+Angola,AFFORDABILITY,59.2
+Argentina,AFFORDABILITY,72.7
+Australia,AFFORDABILITY,90.1
+Austria,AFFORDABILITY,78.1
+Azerbaijan,AFFORDABILITY,78.8
+Bahrain,AFFORDABILITY,71.4
+Bangladesh,AFFORDABILITY,62.2
+Belgium,AFFORDABILITY,83.0
+Benin,AFFORDABILITY,48.6
+Botswana,AFFORDABILITY,67.5
+Brazil,AFFORDABILITY,86.5
+Bulgaria,AFFORDABILITY,73.2
+Burkina Faso,AFFORDABILITY,53.2
+Burundi,AFFORDABILITY,30.9
+Cambodia,AFFORDABILITY,62.9
+Cameroon,AFFORDABILITY,60.3
+Canada,AFFORDABILITY,95.8
+Chile,AFFORDABILITY,88.3
+China,AFFORDABILITY,67.8
+Colombia,AFFORDABILITY,78.4
+Congo (DRC),AFFORDABILITY,43.9
+Costa Rica,AFFORDABILITY,73.7
+Cote d'Ivoire,AFFORDABILITY,57.1
+Croatia,AFFORDABILITY,66.5
+Cuba,AFFORDABILITY,57.3
+Czech Republic,AFFORDABILITY,83.8
+Denmark,AFFORDABILITY,83.5
+Dominican Republic,AFFORDABILITY,59.8
+Ecuador,AFFORDABILITY,78.1
+Egypt,AFFORDABILITY,64.5
+El Salvador,AFFORDABILITY,76.5
+Estonia,AFFORDABILITY,77.7
+Ethiopia,AFFORDABILITY,48.1
+Finland,AFFORDABILITY,85.8
+France,AFFORDABILITY,93.6
+Gabon,AFFORDABILITY,56.4
+Germany,AFFORDABILITY,84.4
+Ghana,AFFORDABILITY,55.1
+Greece,AFFORDABILITY,76.1
+Guatemala,AFFORDABILITY,56.2
+Guinea,AFFORDABILITY,51.0
+Honduras,AFFORDABILITY,58.0
+Hong Kong,AFFORDABILITY,85.8
+Hungary,AFFORDABILITY,82.9
+India,AFFORDABILITY,85.7
+Indonesia,AFFORDABILITY,62.3
+Iran,AFFORDABILITY,69.0
+Ireland,AFFORDABILITY,88.9
+Israel,AFFORDABILITY,90.7
+Italy,AFFORDABILITY,92.5
+Jamaica,AFFORDABILITY,59.2
+Japan,AFFORDABILITY,88.9
+Jordan,AFFORDABILITY,62.4
+Kazakhstan,AFFORDABILITY,66.7
+Kenya,AFFORDABILITY,65.8
+Kuwait,AFFORDABILITY,86.2
+Laos,AFFORDABILITY,70.4
+Latvia,AFFORDABILITY,75.3
+Lebanon,AFFORDABILITY,60.4
+Liberia,AFFORDABILITY,32.4
+Lithuania,AFFORDABILITY,81.9
+Madagascar,AFFORDABILITY,45.3
+Malawi,AFFORDABILITY,41.5
+Malaysia,AFFORDABILITY,71.5
+Mali,AFFORDABILITY,47.6
+Mexico,AFFORDABILITY,75.7
+Mongolia,AFFORDABILITY,74.2
+Morocco,AFFORDABILITY,64.5
+Mozambique,AFFORDABILITY,55.6
+Myanmar,AFFORDABILITY,70.0
+Namibia,AFFORDABILITY,55.6
+Nepal,AFFORDABILITY,64.2
+Netherlands,AFFORDABILITY,78.6
+New Zealand,AFFORDABILITY,87.9
+Nicaragua,AFFORDABILITY,52.5
+Niger,AFFORDABILITY,48.0
+Nigeria,AFFORDABILITY,70.0
+Oman,AFFORDABILITY,63.1
+Pakistan,AFFORDABILITY,67.0
+Panama,AFFORDABILITY,75.1
+Papua New Guinea,AFFORDABILITY,53.1
+Paraguay,AFFORDABILITY,64.6
+Peru,AFFORDABILITY,72.8
+Philippines,AFFORDABILITY,63.4
+Poland,AFFORDABILITY,89.1
+Portugal,AFFORDABILITY,76.5
+Qatar,AFFORDABILITY,70.2
+Romania,AFFORDABILITY,81.7
+Russia,AFFORDABILITY,89.3
+Rwanda,AFFORDABILITY,50.3
+Saudi Arabia,AFFORDABILITY,60.6
+Senegal,AFFORDABILITY,53.7
+Sierra Leone,AFFORDABILITY,39.7
+Singapore,AFFORDABILITY,82.6
+Slovakia,AFFORDABILITY,75.8
+South Africa,AFFORDABILITY,73.4
+South Korea,AFFORDABILITY,84.5
+Spain,AFFORDABILITY,91.9
+Sri Lanka,AFFORDABILITY,64.2
+Sudan,AFFORDABILITY,55.4
+Sweden,AFFORDABILITY,91.3
+Switzerland,AFFORDABILITY,75.7
+Taiwan,AFFORDABILITY,74.3
+Tanzania,AFFORDABILITY,72.4
+Thailand,AFFORDABILITY,79.5
+Trinidad & Tobago,AFFORDABILITY,65.6
+Tunisia,AFFORDABILITY,75.8
+Turkey,AFFORDABILITY,64.5
+UAE,AFFORDABILITY,67.2
+Uganda,AFFORDABILITY,56.8
+Ukraine,AFFORDABILITY,75.5
+United Kingdom,AFFORDABILITY,94.7
+United States,AFFORDABILITY,92.3
+Uruguay,AFFORDABILITY,69.9
+Uzbekistan,AFFORDABILITY,63.0
+Venezuela,AFFORDABILITY,64.3
+Vietnam,AFFORDABILITY,69.4
+Zambia,AFFORDABILITY,58.8
+Zimbabwe,AFFORDABILITY,40.4
+Algeria,Quality,28.4
+Angola,Quality,35.5
+Argentina,Quality,37.8
+Australia,Quality,48.8
+Austria,Quality,47.3
+Azerbaijan,Quality,42.0
+Bahrain,Quality,44.8
+Bangladesh,Quality,35.1
+Belgium,Quality,50.6
+Benin,Quality,30.5
+Botswana,Quality,30.7
+Brazil,Quality,40.6
+Bulgaria,Quality,55.7
+Burkina Faso,Quality,29.6
+Burundi,Quality,31.7
+Cambodia,Quality,38.6
+Cameroon,Quality,28.8
+Canada,Quality,57.2
+Chile,Quality,46.0
+China,Quality,60.3
+Colombia,Quality,36.8
+Congo (DRC),Quality,21.7
+Costa Rica,Quality,37.3
+Cote d'Ivoire,Quality,29.3
+Croatia,Quality,47.9
+Cuba,Quality,25.8
+Czech Republic,Quality,49.5
+Denmark,Quality,61.9
+Dominican Republic,Quality,36.1
+Ecuador,Quality,37.9
+Egypt,Quality,35.5
+El Salvador,Quality,31.0
+Estonia,Quality,49.4
+Ethiopia,Quality,33.6
+Finland,Quality,50.6
+France,Quality,54.3
+Gabon,Quality,31.7
+Germany,Quality,46.1
+Ghana,Quality,35.0
+Greece,Quality,41.7
+Guatemala,Quality,38.6
+Guinea,Quality,24.0
+Honduras,Quality,35.5
+Hong Kong,Quality,79.3
+Hungary,Quality,56.1
+India,Quality,34.4
+Indonesia,Quality,36.3
+Iran,Quality,37.1
+Ireland,Quality,42.7
+Israel,Quality,43.7
+Italy,Quality,42.9
+Jamaica,Quality,39.4
+Japan,Quality,52.6
+Jordan,Quality,46.4
+Kazakhstan,Quality,39.7
+Kenya,Quality,39.5
+Kuwait,Quality,50.4
+Laos,Quality,43.0
+Latvia,Quality,52.9
+Lebanon,Quality,41.3
+Liberia,Quality,39.3
+Lithuania,Quality,58.1
+Madagascar,Quality,31.9
+Malawi,Quality,35.6
+Malaysia,Quality,45.5
+Mali,Quality,38.0
+Mexico,Quality,40.4
+Mongolia,Quality,41.3
+Morocco,Quality,38.7
+Mozambique,Quality,33.3
+Myanmar,Quality,42.1
+Namibia,Quality,33.6
+Nepal,Quality,35.6
+Netherlands,Quality,58.6
+New Zealand,Quality,56.0
+Nicaragua,Quality,36.3
+Niger,Quality,10.3
+Nigeria,Quality,30.0
+Oman,Quality,43.7
+Pakistan,Quality,34.0
+Panama,Quality,40.9
+Papua New Guinea,Quality,30.4
+Paraguay,Quality,36.1
+Peru,Quality,38.3
+Philippines,Quality,33.7
+Poland,Quality,45.4
+Portugal,Quality,50.3
+Qatar,Quality,61.8
+Romania,Quality,59.1
+Russia,Quality,43.9
+Rwanda,Quality,30.7
+Saudi Arabia,Quality,51.6
+Senegal,Quality,34.5
+Sierra Leone,Quality,32.8
+Singapore,Quality,80.0
+Slovakia,Quality,46.2
+South Africa,Quality,39.4
+South Korea,Quality,71.5
+Spain,Quality,55.2
+Sri Lanka,Quality,36.5
+Sudan,Quality,22.2
+Sweden,Quality,58.7
+Switzerland,Quality,64.7
+Taiwan,Quality,71.5
+Tanzania,Quality,31.4
+Thailand,Quality,58.9
+Trinidad & Tobago,Quality,42.6
+Tunisia,Quality,37.4
+Turkey,Quality,42.2
+UAE,Quality,67.5
+Uganda,Quality,31.4
+Ukraine,Quality,44.0
+United Kingdom,Quality,44.1
+United States,Quality,50.5
+Uruguay,Quality,43.3
+Uzbekistan,Quality,33.0
+Venezuela,Quality,21.1
+Vietnam,Quality,49.8
+Zambia,Quality,31.6
+Zimbabwe,Quality,31.2
+Algeria,RELEVANCE,56.3
+Angola,RELEVANCE,25.7
+Argentina,RELEVANCE,87.3
+Australia,RELEVANCE,91.2
+Austria,RELEVANCE,87.2
+Azerbaijan,RELEVANCE,78.5
+Bahrain,RELEVANCE,84.3
+Bangladesh,RELEVANCE,67.6
+Belgium,RELEVANCE,87.9
+Benin,RELEVANCE,31.1
+Botswana,RELEVANCE,35.4
+Brazil,RELEVANCE,85.0
+Bulgaria,RELEVANCE,88.8
+Burkina Faso,RELEVANCE,38.4
+Burundi,RELEVANCE,29.5
+Cambodia,RELEVANCE,58.7
+Cameroon,RELEVANCE,46.9
+Canada,RELEVANCE,81.9
+Chile,RELEVANCE,89.0
+China,RELEVANCE,88.4
+Colombia,RELEVANCE,84.7
+Congo (DRC),RELEVANCE,41.3
+Costa Rica,RELEVANCE,80.1
+Cote d'Ivoire,RELEVANCE,57.0
+Croatia,RELEVANCE,90.8
+Cuba,RELEVANCE,52.6
+Czech Republic,RELEVANCE,78.1
+Denmark,RELEVANCE,91.9
+Dominican Republic,RELEVANCE,66.7
+Ecuador,RELEVANCE,78.0
+Egypt,RELEVANCE,69.9
+El Salvador,RELEVANCE,62.3
+Estonia,RELEVANCE,93.6
+Ethiopia,RELEVANCE,53.7
+Finland,RELEVANCE,88.3
+France,RELEVANCE,89.3
+Gabon,RELEVANCE,39.8
+Germany,RELEVANCE,78.5
+Ghana,RELEVANCE,58.1
+Greece,RELEVANCE,91.1
+Guatemala,RELEVANCE,74.3
+Guinea,RELEVANCE,32.4
+Honduras,RELEVANCE,73.0
+Hong Kong,RELEVANCE,87.5
+Hungary,RELEVANCE,73.1
+India,RELEVANCE,83.3
+Indonesia,RELEVANCE,79.9
+Iran,RELEVANCE,86.5
+Ireland,RELEVANCE,89.8
+Israel,RELEVANCE,88.0
+Italy,RELEVANCE,90.7
+Jamaica,RELEVANCE,50.4
+Japan,RELEVANCE,82.1
+Jordan,RELEVANCE,76.7
+Kazakhstan,RELEVANCE,75.7
+Kenya,RELEVANCE,85.4
+Kuwait,RELEVANCE,84.3
+Laos,RELEVANCE,50.2
+Latvia,RELEVANCE,88.5
+Lebanon,RELEVANCE,56.4
+Liberia,RELEVANCE,35.4
+Lithuania,RELEVANCE,90.6
+Madagascar,RELEVANCE,37.6
+Malawi,RELEVANCE,46.5
+Malaysia,RELEVANCE,88.3
+Mali,RELEVANCE,47.1
+Mexico,RELEVANCE,86.1
+Mongolia,RELEVANCE,76.1
+Morocco,RELEVANCE,76.1
+Mozambique,RELEVANCE,34.7
+Myanmar,RELEVANCE,68.0
+Namibia,RELEVANCE,44.3
+Nepal,RELEVANCE,54.9
+Netherlands,RELEVANCE,86.0
+New Zealand,RELEVANCE,89.2
+Nicaragua,RELEVANCE,68.4
+Niger,RELEVANCE,33.2
+Nigeria,RELEVANCE,83.6
+Oman,RELEVANCE,82.0
+Pakistan,RELEVANCE,57.3
+Panama,RELEVANCE,67.0
+Papua New Guinea,RELEVANCE,45.3
+Paraguay,RELEVANCE,88.4
+Peru,RELEVANCE,83.5
+Philippines,RELEVANCE,77.6
+Poland,RELEVANCE,94.1
+Portugal,RELEVANCE,89.9
+Qatar,RELEVANCE,83.0
+Romania,RELEVANCE,87.8
+Russia,RELEVANCE,92.3
+Rwanda,RELEVANCE,64.4
+Saudi Arabia,RELEVANCE,87.1
+Senegal,RELEVANCE,43.4
+Sierra Leone,RELEVANCE,41.6
+Singapore,RELEVANCE,84.7
+Slovakia,RELEVANCE,88.5
+South Africa,RELEVANCE,82.9
+South Korea,RELEVANCE,78.8
+Spain,RELEVANCE,88.5
+Sri Lanka,RELEVANCE,73.5
+Sudan,RELEVANCE,60.1
+Sweden,RELEVANCE,90.7
+Switzerland,RELEVANCE,84.7
+Taiwan,RELEVANCE,92.0
+Tanzania,RELEVANCE,57.0
+Thailand,RELEVANCE,69.9
+Trinidad & Tobago,RELEVANCE,61.3
+Tunisia,RELEVANCE,60.1
+Turkey,RELEVANCE,79.2
+UAE,RELEVANCE,85.1
+Uganda,RELEVANCE,76.1
+Ukraine,RELEVANCE,86.9
+United Kingdom,RELEVANCE,84.1
+United States,RELEVANCE,92.9
+Uruguay,RELEVANCE,86.5
+Uzbekistan,RELEVANCE,70.7
+Venezuela,RELEVANCE,75.3
+Vietnam,RELEVANCE,79.8
+Zambia,RELEVANCE,59.1
+Zimbabwe,RELEVANCE,49.9
+Algeria,READINESS,53.7
+Angola,READINESS,54.2
+Argentina,READINESS,78.2
+Australia,READINESS,80.9
+Austria,READINESS,81.4
+Azerbaijan,READINESS,59.7
+Bahrain,READINESS,73.6
+Bangladesh,READINESS,62.7
+Belgium,READINESS,77.4
+Benin,READINESS,59.3
+Botswana,READINESS,68.4
+Brazil,READINESS,64.5
+Bulgaria,READINESS,72.7
+Burkina Faso,READINESS,50.6
+Burundi,READINESS,35.0
+Cambodia,READINESS,55.1
+Cameroon,READINESS,41.8
+Canada,READINESS,76.6
+Chile,READINESS,82.9
+China,READINESS,76.1
+Colombia,READINESS,79.7
+Congo (DRC),READINESS,45.4
+Costa Rica,READINESS,73.2
+Cote d'Ivoire,READINESS,43.6
+Croatia,READINESS,67.6
+Cuba,READINESS,55.7
+Czech Republic,READINESS,73.2
+Denmark,READINESS,75.8
+Dominican Republic,READINESS,73.4
+Ecuador,READINESS,61.1
+Egypt,READINESS,61.7
+El Salvador,READINESS,48.0
+Estonia,READINESS,78.5
+Ethiopia,READINESS,45.3
+Finland,READINESS,76.0
+France,READINESS,72.6
+Gabon,READINESS,50.9
+Germany,READINESS,80.7
+Ghana,READINESS,65.5
+Greece,READINESS,63.6
+Guatemala,READINESS,43.2
+Guinea,READINESS,48.3
+Honduras,READINESS,39.0
+Hong Kong,READINESS,69.6
+Hungary,READINESS,66.7
+India,READINESS,73.9
+Indonesia,READINESS,63.4
+Iran,READINESS,72.6
+Ireland,READINESS,70.6
+Israel,READINESS,72.9
+Italy,READINESS,72.0
+Jamaica,READINESS,66.1
+Japan,READINESS,81.5
+Jordan,READINESS,59.0
+Kazakhstan,READINESS,69.5
+Kenya,READINESS,69.4
+Kuwait,READINESS,66.8
+Laos,READINESS,46.1
+Latvia,READINESS,77.5
+Lebanon,READINESS,43.3
+Liberia,READINESS,50.9
+Lithuania,READINESS,71.8
+Madagascar,READINESS,52.8
+Malawi,READINESS,51.8
+Malaysia,READINESS,82.6
+Mali,READINESS,50.2
+Mexico,READINESS,70.8
+Mongolia,READINESS,63.4
+Morocco,READINESS,55.9
+Mozambique,READINESS,50.9
+Myanmar,READINESS,65.6
+Namibia,READINESS,54.6
+Nepal,READINESS,68.8
+Netherlands,READINESS,83.1
+New Zealand,READINESS,72.5
+Nicaragua,READINESS,46.1
+Niger,READINESS,47.3
+Nigeria,READINESS,70.5
+Oman,READINESS,80.2
+Pakistan,READINESS,61.4
+Panama,READINESS,60.2
+Papua New Guinea,READINESS,57.2
+Paraguay,READINESS,70.2
+Peru,READINESS,73.4
+Philippines,READINESS,61.2
+Poland,READINESS,79.6
+Portugal,READINESS,73.5
+Qatar,READINESS,86.7
+Romania,READINESS,66.7
+Russia,READINESS,64.3
+Rwanda,READINESS,73.7
+Saudi Arabia,READINESS,72.9
+Senegal,READINESS,64.4
+Sierra Leone,READINESS,20.6
+Singapore,READINESS,73.9
+Slovakia,READINESS,70.9
+South Africa,READINESS,76.3
+South Korea,READINESS,82.4
+Spain,READINESS,85.1
+Sri Lanka,READINESS,43.0
+Sudan,READINESS,41.7
+Sweden,READINESS,83.0
+Switzerland,READINESS,79.6
+Taiwan,READINESS,77.2
+Tanzania,READINESS,65.7
+Thailand,READINESS,50.3
+Trinidad & Tobago,READINESS,63.6
+Tunisia,READINESS,57.4
+Turkey,READINESS,77.1
+UAE,READINESS,65.0
+Uganda,READINESS,71.1
+Ukraine,READINESS,62.4
+United Kingdom,READINESS,76.5
+United States,READINESS,81.9
+Uruguay,READINESS,67.1
+Uzbekistan,READINESS,64.9
+Venezuela,READINESS,48.9
+Vietnam,READINESS,69.9
+Zambia,READINESS,60.5
+Zimbabwe,READINESS,53.4
