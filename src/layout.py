@@ -83,7 +83,32 @@ elif content_choice == "Social Connections":
 
 elif content_choice == "Rise of Internet":
     # display relevant content
-    st.write(content_choice)
+    st.header('Internet Trends and Impacts')
+    st.subheader("The Internet - usage across the world; A brief story")
+    components.html(
+        '<div class="flourish-embed" data-src="story/1056561"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+    
+
+    st.subheader('Is there a Relationship between Internet User Population and GNI per capital of countries?')
+    with st.expander('Click to read more on Internet User Population and GNI per capital of countries?'):
+        components.html(
+        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8020581"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+    
+    st.subheader('Internet Users Ranking by Countries')
+    components.html(
+    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016698"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+    components.html(
+    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016738"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+    components.html(
+    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016719"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+    components.html(
+    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016758"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+
+    st.subheader('Offline Statistics')
+    components.html(
+    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016773"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+    components.html(
+    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016831"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
 
 elif content_choice == "Rise of Social Media":
     # display relevant content
