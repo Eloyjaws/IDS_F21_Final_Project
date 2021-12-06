@@ -156,6 +156,7 @@ loneliness_self_reported_blurb = """
         One of the major ways to examine the seriousness of an unhealthy mental state such 
         as loneliness is by using surveys. Our first dataset we explored the self-reported 
         loneliness among older individuals in a number of European countries and the US. 
+        
         As shown in the visualization, the prevalence of loneliness varies significantly 
         among the surveyed countries: Denmark’s reported share of loneliness is as low as 
         25%, while the number in Greece reaches a staggering 62%. The wide gap also notes 
@@ -169,7 +170,8 @@ loneliness_friends_relative_blurb = """
         Besides the direct self-report provided above, we have also found tangential evidence 
         regarding loneliness. In a 2016 cross-country survey, participants were asked whether 
         they have close friends or relatives they can count on when participants are in need. 
-        In a certain perspective, the question is effectively asking whether the participant 
+        
+        From a loneliness perspective, the question is effectively asking whether the participant 
         has strong social connections and is probably not lonely. As we can see from the map, 
         Ireland has the max share of 98.3% while South Korea has min share of 75.9%, and 
         both are developed countries. We can also observe that among developing countries, 
@@ -180,7 +182,9 @@ loneliness_friends_relative_blurb = """
 loneliness_single_person_household_impact_blurb_one = """
         Share of single-person households has been suggested as a factor related to loneliness. 
         To explore this problem, we combined data provided by OurWorld and WorldBank to generate 
-        the visualization of GDP per capita vs Share of One-Person Households. Since GDP per capita 
+        the visualization of GDP per capita vs Share of One-Person Households. 
+        
+        Since GDP per capita 
         for most countries grows as time progresses, the X-axis can also be viewed as an axis of time 
         (non-linear scale). Examining the trend over the world and for each continent, we can observe 
         that the share of single-person households grows as GDP per capita increases.
@@ -191,20 +195,29 @@ loneliness_single_person_household_impact_blurb_two = """
         analysis, economic states do not correlate well with the prevalence of loneliness, but there is 
         an obvious correlation between wealth and share of one person households. Denmark, whose elder 
         population reported the least share of loneliness, has as many as 45% of one-person households. 
-        So our conclusion as of now is that the correlation is difficult to draw between loneliness and 
+
+        So our conclusion is that the direct correlation is difficult to draw between loneliness and 
         share of single-person households. For example, the rapid rise in single-person households may be 
-        attributed to people being wealthy enough to live in single-person rather than living alone causes 
+        attributed to people being finally wealthy enough to live by themselves rather than living alone causes 
         loneliness (or vice versa). Also, it is worth pointing out that being alone and loneliness are two 
-        different things, which is out of the scope of this project.
+        different concepts, whose specific differences are out of the scope of this project.
 
         The more complex interaction among single-person household share, GDP per capita, sufficiency of 
         mental health facilities, and many more factors may be able to predict the level of loneliness for 
-        any given entity using machine learning. However, we believe it is clear that our data is insufficient 
+        any given entity using machine learning. However, we believe that our limited data is insufficient 
         to perform such analysis.
+    """
 
-        And there has been debate about whether social media can counterintuitively lead to the problem of 
+loneliness_social_media_blurb = """
+        There has been much debate about whether social media can counterintuitively lead to the problem of 
         loneliness. According to our research, a more appropriate question should be how much social media 
-        usage leads to increased feelings of loneliness.
+        usage leads to increased anxiety or feelings of loneliness/anxiety.
+
+        OurWorld has performed analysis of data previously released by Moment, an app that allows users to 
+        track their screen time with other apps. A quick glance at the visualization shows that happy users 
+        generally spend less time on social media apps than unhappy users. Though this result does not 
+        answer the debated question of whether social media causes loneliness, the conclusion is easy to 
+        interpret: spending too much time on social media incurs diminishing (and even negative) return.
     """
 
 Conclusion = """
