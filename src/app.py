@@ -1,166 +1,220 @@
 import sys
+# from src.app import ROOT_DIR
 sys.path.append("..")
 
-
-import streamlit.components.v1 as components
 import streamlit as st
-from PIL import Image
-import altair as alt
-import seaborn as sns
-import matplotlib.pyplot as plt
-import numpy as np
+import streamlit.components.v1 as components
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from PIL import Image
 
 import text
 import plots
 import utils
 from pathlib import Path
-# from utils import get_productivity_countries_list, get_productivity_data
 
+ROOT_DIR = Path(__file__).parent.parent.resolve()
 # Use Wide Page Format
 # st.set_page_config(layout="wide")
 
-ROOT_DIR = Path(__file__).parent.parent.resolve()
+# Base heading for side bar
+sidebar_img = Image.open(ROOT_DIR.joinpath("images/connections_sidebar.jpg"))
+st.sidebar.image(sidebar_img)
+st.sidebar.title("Social Connections & the Internet")
 
-logo = Image.open(ROOT_DIR.joinpath("images/world.png"))
-st.image(
-    logo,
-    width=100,
-)
+content_choice = st.sidebar.radio(
+    "Menu", [
+        "Intro",
+        "Social Connections",
+        "Internet: Trends and Impacts",
+        "Rise of Social Media",
+        "Loneliness",
+        "Conclusion"
+    ])
 
-st.title(text.Title)
-# world_bank_screenshot = Image.open("world_bank.png")
-productivity_data = utils.get_productivity_data()
-productivity_df = productivity_data.copy()
-
-
-st.sidebar.subheader("Render Menu")
-show_social_connections = st.sidebar.checkbox("Social Connections", True)
-show_internet_stats = st.sidebar.checkbox("Internet Statistics", True)
-show_social_media_stats = st.sidebar.checkbox("Social Media Statistics", True)
-show_loneliness_stats = st.sidebar.checkbox("Loneliness Statistics", True)
-
-
-if show_social_connections:
-    st.subheader("How Important are Social Connections for our health?")
+if content_choice == "Intro":
+    # display relevant content
+    # Base heading for main page
+    title_img = Image.open(ROOT_DIR.joinpath("images/connections_title.jpg"))
+    st.image(title_img)
+    st.title("Social Connections & the Internet")
+    st.markdown(text.Introduction, unsafe_allow_html=True)
+    
+elif content_choice == "Social Connections":
+    # display relevant content
+    st.header("How Important are Social Connections for our health?")
+    st.markdown(text.social_connections_blurb_one, unsafe_allow_html=True)
+    st.video("https://www.youtube.com/watch?v=8KkKuTCFvzI")
+    st.write(text.social_connections_blurb_two)
     happiness_image = Image.open(ROOT_DIR.joinpath("images/happiness-and-friends.png"))
     st.image(happiness_image)
 
-    # Facebook Social Connectedness
-    components.html(
-        '<div class="flourish-embed flourish-globe" data-src="visualisation/7988652"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+    st.subheader('Impact of Connections on Job Seeking')
+    st.write(text.social_connections_blurb_three)
+    with st.expander('Click to view insights on Impact of Connections on Job Seeking'):
+        components.html(
+            '<div class="flourish-embed flourish-chart" data-src="visualisation/8037091"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
-    st.subheader('Impact of Connections on Employment')
-    components.html(
-        '<div class="flourish-embed flourish-chart" data-src="visualisation/8037091"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-
-    # EU
-    components.html(
-        '<div class="flourish-embed flourish-map" data-src="visualisation/7985810"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+        # EU
+        components.html(
+            '<div class="flourish-embed flourish-map" data-src="visualisation/7985810"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=550)
 
     # Productivity # TODO: What has this got to do with our work?
-    st.subheader('Impact of Internet on Productivity')
-    components.html(
-        '<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/7987034"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+    st.subheader('Impact of Connections on Productivity')
+    st.write(text.social_connections_blurb_four)
+    with st.expander('Click to view insights on Impact of Connections on Productivity'):
+        components.html(
+            '<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/7987034"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
-    # Static Comparison of Productivity
-    selected_entities = st.multiselect(
-        label="Select interested economic entities for comparison",
-        options=utils.get_productivity_countries_list(),
-        default=["United States", "Japan", "South Africa", "Australia", "China", "Spain", "Brazil"]
-    )
-    if selected_entities:
-        productivity_filtered = productivity_df[productivity_df["Entity"].isin(selected_entities)].rename(columns={"Productivity (PWT 9.1 (2019))":"Productivity"})
-        productivity_plot = plots.lineplot(
-            productivity_filtered,
-            'Year',
-            'Productivity',
-            'Year',
-            'GDP per hour work ($)',
-            'Entity',
-            ['Entity', 'Year', 'Code', 'Productivity'],
-            'Productivity Comparison Amongst Countries',
+        # Static Comparison of Productivity
+        selected_entities = st.multiselect(
+            label="Select interested economic entities for comparison",
+            options=utils.get_productivity_countries_list(),
+            default=["United States", "Japan", "South Africa", "Australia", "China", "Spain", "Brazil"]
         )
 
-        st.altair_chart(productivity_plot, use_container_width=True)
+        # Fetch Data
+        productivity_data = utils.get_productivity_data()
+        productivity_df = productivity_data.copy()
 
-if show_internet_stats:
-    st.header('Internet Trends and Impacts')
+        if selected_entities:
+            productivity_filtered = productivity_df[productivity_df["Entity"].isin(selected_entities)].rename(columns={"Productivity (PWT 9.1 (2019))":"Productivity"})
+            productivity_plot = plots.lineplot(
+                productivity_filtered,
+                'Year',
+                'Productivity',
+                'Year',
+                'GDP per hour work ($)',
+                'Entity',
+                ['Entity', 'Year', 'Code', 'Productivity'],
+                'Productivity Comparison Amongst Countries',
+            )
+
+            st.altair_chart(productivity_plot, use_container_width=True)
+
+elif content_choice == "Internet: Trends and Impacts":
+    # display relevant content
+    st.header("The Internet usage across the world - A brief story")
     components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8020581"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+        '<div class="flourish-embed" data-src="story/1056561"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=700)
+
+    st.subheader('Internet Usage Trends')
+    with st.expander("Click for insight on Daily time spent on the Internet by young people, 2016"):
+        st.write(text.internet_daily_time_spent)
+        components.html(
+            '<div class="flourish-embed flourish-chart" data-src="visualisation/8040725"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
+    with st.expander("Click for insight on Daily Hours spent with digital Media, United States, 2008 - 2018"):
+        st.write(text.digital_media_time_spent)
+        components.html(
+            '<div class="flourish-embed flourish-chart" data-src="visualisation/8040586"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
+    st.subheader('Is there a Relationship between Internet User Population and GNI per capital of countries?')
+    st.write(text.internet_usage_gni)
+    with st.expander('Click to read more on Internet User Population and GNI per capital of countries?'):
+        components.html(
+        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8020581"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
     
-    st.subheader('Offline Statistics')
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016773"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016831"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+    st.subheader('Is the Internet usage really Inclusive?')
+    st.write(text.internet_inclusivity_index)
+    with st.expander('Comparison of Internet Inclusivity Amongst Countries'):
+        # Comparison of Internet Inclusivity Amongst Countries
+        country_list, internet_inclusivity = utils.get_inclusivity_data()
+        countries_, internet_inclusivity_df = country_list.copy(), internet_inclusivity.copy()
+        selected_countries = st.multiselect(
+            label="Select ONLY 4 countries to view their internet inclusivity score.",
+            options=countries_,
+            default=["United States", "China", "South Africa", "Australia",]
+        )
+        if selected_countries:
+            internet_inclusivity_filtered = internet_inclusivity_df[internet_inclusivity_df["Country"].isin(selected_countries[:4])]
+            inclusivity_plot = plots.barplot(
+                internet_inclusivity_filtered,
+                'Internet_3i_metric',
+                'Internet_3i_score',
+                'Inclusivity Metrics',
+                'Internet Inclusivity Scores',
+                'Internet_3i_metric',
+                'Country',
+                ['Internet_3i_metric', 'Internet_3i_score'],
+                'Internet Inclusivity Comparison Amongst Countries',
+            )
 
-    st.subheader('Internet Users Ranking by Countries')
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016698"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016738"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016719"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-    components.html(
-    '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016758"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+        st.altair_chart(inclusivity_plot)
 
-    st.subheader("The Internet - usage across the world")
-    components.html(
-        '<div class="flourish-embed" data-src="story/1056561"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-
-
-
-
-if show_social_media_stats:
+elif content_choice == "Rise of Social Media":
+    # display relevant content
     st.header('Rise of Social Media - Trends and Stats')
+
+    # Facebook Social Connectedness
+    st.subheader('Facebook Connected Index')
+    st.write(text.social_connectednes_blurb_one)
+    st.latex(r'''
+        Social\ Connectedness_{i,j} = \frac{FB\_Connections_{i,j}}{FB\_Users_i * FB\_Users_j}
+    ''')
+    st.latex(r'''FB\_Users_i\ and\ FB\_Users_j\ are\ number\ of\ Facebook\ users\ in\ locations\ i\ and\ j''')
+    st.latex(r'''FB\_Connections_{i,j}\ is\ the\ number\ of\ connections\ between\ the\ two\ locations''')
+    components.html(
+        '<div class="flourish-embed flourish-globe" data-src="visualisation/8038403"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=650)
+    st.write(text.social_connectednes_blurb_two)
+    
+
     # MAU for Social Media Platform (2002 - 2018)
     st.subheader("Online Social Networking Trends amongst Young Users")
+    st.write(text.social_media_maus_blurb)
     components.html(
-        '<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/8030229"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+        '<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/8030229"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=650)
 
-    st.subheader("Online Social Networking Trends amongst Young Users")
+    st.write(text.social_media_young_users_blurb)
     components.html(
         '<div class="flourish-embed flourish-chart" data-src="visualisation/8015401"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
 
     # Social Media Usage by Gender Distribution
-    st.subheader("Online Social Networking Trends amongst Young Users")
+    st.subheader("Usage of Social Media Platforms by Gender Distribution")
+    st.write(text.social_media_gender_blurb)
     components.html(
-        '<div class="flourish-embed flourish-chart" data-src="visualisation/8016063"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+        '<div class="flourish-embed flourish-chart" data-src="visualisation/8016063"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
-    st.subheader("Daily Hours spent with digital Media, United States, 2008 - 2018")
-    components.html(
-        '<div class="flourish-embed flourish-chart" data-src="visualisation/8040586"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-
-    st.subheader("Daily time spent on the Internet by young people, 2016")
-    components.html(
-        '<div class="flourish-embed flourish-chart" data-src="visualisation/8040725"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
-
-if show_loneliness_stats:
+elif content_choice == "Loneliness":
+    # display relevant content
     st.header("Social Isolation & Loneliness")
-    components.html(
-        '<div class="flourish-embed flourish-map" data-src="visualisation/7985093"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
 
     # Loneliness
+    st.write(text.loneliness_self_reported_blurb)
     components.html(
-        '<div class="flourish-embed flourish-map" data-src="visualisation/7985093"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+        '<div class="flourish-embed flourish-map" data-src="visualisation/7985093"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
     # Friends/Relatives to Count on
-    components.html(
-        '<div class="flourish-embed flourish-map" data-src="visualisation/7989899"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+    st.header('Factors Impacting Social Isolation & loneliness')
+    st.subheader('Close Friends & Relatives')
+    with st.expander('Click to view insight'):
+        st.write(text.loneliness_friends_relative_blurb)
+        components.html(
+            '<div class="flourish-embed flourish-map" data-src="visualisation/7989899"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
     # One-Person Household
-    components.html(
-        '<div class="flourish-embed flourish-scatter" data-src="visualisation/7991020"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=800)
+    st.subheader('One-Person Household, GDP per Capita & Increasing Loneliness')
+    with st.expander('Click to view insight'):
+        st.write(text.loneliness_single_person_household_impact_blurb_one)
+        components.html(
+            '<div class="flourish-embed flourish-scatter" data-src="visualisation/7991020"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+        st.write(text.loneliness_single_person_household_impact_blurb_two)
 
-# st.header("Extra: how well do you know your country's internet ranking?")
-st.header("Extra: Predict Internet Availability & Affrodability using GNI and 3i data?")
+    # Impacts of Social Media
+    st.subheader('Social Media Usage & Loneliness and Happiness')
+    with st.expander('Click to view insight'):
+        st.write(text.loneliness_social_media_blurb)
+        smt_happy_img = Image.open(ROOT_DIR.joinpath("images/social_media_time_happy.png"))
+        st.image(smt_happy_img)
 
-st.header("Conclusion")
-st.write(text.Conclusion)
+elif content_choice == "Conclusion":
+    # display relevant content
+    st.header("Conclusion")
+    st.write(text.Conclusion)
 
-
-with st.expander("References"):
-    st.markdown(text.References, unsafe_allow_html=True)
+    with st.expander("References"):
+        st.markdown(text.References, unsafe_allow_html=True)
 
 st.sidebar.markdown(text.Footer, unsafe_allow_html=True)
