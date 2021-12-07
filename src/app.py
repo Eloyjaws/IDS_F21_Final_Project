@@ -26,7 +26,7 @@ st.sidebar.title("Social Connections & the Internet")
 
 content_choice = st.sidebar.radio(
     "Menu", [
-        "Intro",
+        "Introduction",
         "Social Connections",
         "Internet: Trends and Impacts",
         "Rise of Social Media",
@@ -34,7 +34,7 @@ content_choice = st.sidebar.radio(
         "Conclusion"
     ])
 
-if content_choice == "Intro":
+if content_choice == "Introduction":
     # display relevant content
     # Base heading for main page
     title_img = Image.open(ROOT_DIR.joinpath("images/connections_title.jpg"))
@@ -50,6 +50,7 @@ elif content_choice == "Social Connections":
     st.write(text.social_connections_blurb_two)
     happiness_image = Image.open(ROOT_DIR.joinpath("images/happiness-and-friends.png"))
     st.image(happiness_image)
+    st.caption('Image Source: https://ourworldindata.org/uploads/2019/07/happiness-and-friends-v3-e1564090552891.png')
 
     st.subheader('Impact of Connections on Job Seeking')
     st.write(text.social_connections_blurb_three)
@@ -79,20 +80,22 @@ elif content_choice == "Social Connections":
         productivity_data = utils.get_productivity_data()
         productivity_df = productivity_data.copy()
 
-        if selected_entities:
-            productivity_filtered = productivity_df[productivity_df["Entity"].isin(selected_entities)].rename(columns={"Productivity (PWT 9.1 (2019))":"Productivity"})
-            productivity_plot = plots.lineplot(
-                productivity_filtered,
-                'Year',
-                'Productivity',
-                'Year',
-                'GDP per hour work ($)',
-                'Entity',
-                ['Entity', 'Year', 'Code', 'Productivity'],
-                'Productivity Comparison Amongst Countries',
-            )
+        if len(selected_entities) == 0:
+            selected_entities = ["United States", "Japan", "South Africa", "Australia", "China", "Spain", "Brazil"]
+        productivity_filtered = productivity_df[productivity_df["Entity"].isin(selected_entities)].rename(columns={"Productivity (PWT 9.1 (2019))":"Productivity"})
+        productivity_plot = plots.lineplot(
+            productivity_filtered,
+            'Year',
+            'Productivity',
+            'Year',
+            'GDP per hour work ($)',
+            'Entity',
+            ['Entity', 'Year', 'Code', 'Productivity'],
+            'Productivity Comparison Amongst Countries',
+        )
 
-            st.altair_chart(productivity_plot, use_container_width=True)
+        st.altair_chart(productivity_plot, use_container_width=True)
+        st.caption('Data Source: https://www.rug.nl/ggdc/productivity/pwt/')
 
 elif content_choice == "Internet: Trends and Impacts":
     # display relevant content
@@ -104,7 +107,7 @@ elif content_choice == "Internet: Trends and Impacts":
     with st.expander("Click for insight on Daily time spent on the Internet by young people, 2016"):
         st.write(text.internet_daily_time_spent)
         components.html(
-            '<div class="flourish-embed flourish-chart" data-src="visualisation/8040725"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+            '<div class="flourish-embed flourish-chart" data-src="visualisation/8040725"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=700)
 
     with st.expander("Click for insight on Daily Hours spent with digital Media, United States, 2008 - 2018"):
         st.write(text.digital_media_time_spent)
@@ -126,23 +129,25 @@ elif content_choice == "Internet: Trends and Impacts":
         selected_countries = st.multiselect(
             label="Select ONLY 4 countries to view their internet inclusivity score.",
             options=countries_,
-            default=["United States", "China", "South Africa", "Australia",]
+            default=["United States", "China", "South Africa", "Australia"]
         )
-        if selected_countries:
-            internet_inclusivity_filtered = internet_inclusivity_df[internet_inclusivity_df["Country"].isin(selected_countries[:4])]
-            inclusivity_plot = plots.barplot(
-                internet_inclusivity_filtered,
-                'Internet_3i_metric',
-                'Internet_3i_score',
-                'Inclusivity Metrics',
-                'Internet Inclusivity Scores',
-                'Internet_3i_metric',
-                'Country',
-                ['Internet_3i_metric', 'Internet_3i_score'],
-                'Internet Inclusivity Comparison Amongst Countries',
-            )
+        if len(selected_countries) == 0:
+            selected_countries = ["United States", "China", "South Africa", "Australia"]
+        internet_inclusivity_filtered = internet_inclusivity_df[internet_inclusivity_df["Country"].isin(selected_countries[:4])]
+        inclusivity_plot = plots.barplot(
+            internet_inclusivity_filtered,
+            'Internet_3i_metric',
+            'Internet_3i_score',
+            'Inclusivity Metrics',
+            'Internet Inclusivity Scores',
+            'Internet_3i_metric',
+            'Country',
+            ['Internet_3i_metric', 'Internet_3i_score'],
+            'Internet Inclusivity Comparison Amongst Countries',
+        )
 
         st.altair_chart(inclusivity_plot)
+        st.caption('Data Source: https://theinclusiveinternet.eiu.com/')
 
 elif content_choice == "Rise of Social Media":
     # display relevant content
@@ -208,6 +213,7 @@ elif content_choice == "Loneliness":
         st.write(text.loneliness_social_media_blurb)
         smt_happy_img = Image.open(ROOT_DIR.joinpath("images/social_media_time_happy.png"))
         st.image(smt_happy_img)
+        st.caption('Image Source: https://ourworldindata.org/uploads/2019/09/TIme-spent-on-social-media-apps-%E2%80%93-happy-vs-unhappy-users-608x550.png')
 
 elif content_choice == "Conclusion":
     # display relevant content
