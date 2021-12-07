@@ -264,7 +264,9 @@ Conclusion = """
     """
 
 References = """
-                - Internet and Social media Logo obtained from https://www.flaticon.com/premium-icon/world_2274428
+                - Header media Logo obtained from https://decision-wise.com/wp-content/uploads/2018/02/shutterstock_43249717.jpg
+
+                - Sidebar media logo obtained from https://aldinhe.ac.uk/wp-content/uploads/2021/03/Working-Group-Partnerships-300x300-1.jpg
                 
                 - Facebook's Social Connectedness Index from https://dataforgood.facebook.com/dfg/docs/methodology-social-connectedness-index
 
@@ -285,6 +287,9 @@ Footer = """ <style>
     left: 16;
     bottom: 0;
     }
+    .submission {
+        text-decoration: None
+    }
     </style>
     <div class="footer">
     <p>An Interactive Web App by 
@@ -293,6 +298,10 @@ Footer = """ <style>
             <li>Guo [Timur] Chen (gchen2)</li>
             <li>Eniola Ajiboye (eajiboye)</li>
         </ul>
-        &nbsp;
+    </p>
+    <p>
+        <a class='submission' href='https://github.com/Eloyjaws/IDS_F21_Final_Project' target='_blank'> Github</a> | 
+        <a class='submission' href='https://github.com/Eloyjaws/IDS_F21_Final_Project' target='_blank'> Video Recording</a>
+    </p>
     </div>
     """
