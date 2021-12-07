@@ -103,7 +103,18 @@ elif content_choice == "Social Connections":
 
 elif content_choice == "Internet: Trends and Impacts":
     # display relevant content
-    st.header("The Internet usage across the world - A brief story")
+    st.header("Internet usage across the world")
+
+    digital_divide_1 = Image.open(ROOT_DIR.joinpath(
+        "images/corana_digital_divide_1.png"))
+    digital_divide_2 = Image.open(ROOT_DIR.joinpath(
+        "images/corona_digital_divide_2.png"))
+
+    col1, col2 = st.columns(2)
+    col1.image(digital_divide_1)
+    col2.image(digital_divide_2)
+    st.caption('Image Source: https://www.weforum.org/agenda/2020/04/coronavirus-covid-19-pandemic-digital-divide-internet-data-broadband-mobbile/')
+
     components.html(
         '<div class="flourish-embed" data-src="story/1056561"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=700)
 
@@ -156,7 +167,7 @@ elif content_choice == "Internet: Trends and Impacts":
     st.altair_chart(inclusivity_plot)
     st.caption('Data Source: https://theinclusiveinternet.eiu.com/')
 
-    st.subheader('Machine Learning')
+    st.subheader('Using Machine Learning to predict Internet relevance')
     with st.expander('Predicting the relevance of the internet from its availability and affordability'):
         model_result = plots.mlplot()
         st.altair_chart(model_result)

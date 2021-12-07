@@ -31,8 +31,6 @@ def mlplot():
     df_viz = utils.get_ml_data()
 
     st.write("We trained a Random Forests model - XGBoost to predict the relevance of the internet given its availability and affordability")
-    st.write(
-        "The performance was just decent and suffered a hit after more extensive cleaning")
 
     affordability = alt.Chart(df_viz).mark_circle().encode(
         x='AFFORDABILITY',
