@@ -50,7 +50,8 @@ elif content_choice == "Social Connections":
     happiness_image = Image.open(ROOT_DIR.joinpath(
         "images/happiness-and-friends.png"))
     st.image(happiness_image)
-    st.caption('Image Source: https://ourworldindata.org/uploads/2019/07/happiness-and-friends-v3-e1564090552891.png')
+    st.caption(
+        'Image Source: https://ourworldindata.org/uploads/2019/07/happiness-and-friends-v3-e1564090552891.png')
 
     st.subheader('Impact of Connections on Job Seeking')
     st.write(text.social_connections_blurb_three)
@@ -82,8 +83,10 @@ elif content_choice == "Social Connections":
         productivity_df = productivity_data.copy()
 
         if len(selected_entities) == 0:
-            selected_entities = ["United States", "Japan", "South Africa", "Australia", "China", "Spain", "Brazil"]
-        productivity_filtered = productivity_df[productivity_df["Entity"].isin(selected_entities)].rename(columns={"Productivity (PWT 9.1 (2019))":"Productivity"})
+            selected_entities = ["United States", "Japan",
+                                 "South Africa", "Australia", "China", "Spain", "Brazil"]
+        productivity_filtered = productivity_df[productivity_df["Entity"].isin(
+            selected_entities)].rename(columns={"Productivity (PWT 9.1 (2019))": "Productivity"})
         productivity_plot = plots.lineplot(
             productivity_filtered,
             'Year',
@@ -134,8 +137,10 @@ elif content_choice == "Internet: Trends and Impacts":
             default=["United States", "China", "South Africa", "Australia"]
         )
         if len(selected_countries) == 0:
-            selected_countries = ["United States", "China", "South Africa", "Australia"]
-        internet_inclusivity_filtered = internet_inclusivity_df[internet_inclusivity_df["Country"].isin(selected_countries[:4])]
+            selected_countries = ["United States",
+                                  "China", "South Africa", "Australia"]
+        internet_inclusivity_filtered = internet_inclusivity_df[internet_inclusivity_df["Country"].isin(
+            selected_countries[:4])]
         inclusivity_plot = plots.barplot(
             internet_inclusivity_filtered,
             'Internet_3i_metric',
@@ -148,10 +153,14 @@ elif content_choice == "Internet: Trends and Impacts":
             'Internet Inclusivity Comparison Amongst Countries',
         )
 
-        st.altair_chart(inclusivity_plot)
-        st.caption('Data Source: https://theinclusiveinternet.eiu.com/')
+    st.altair_chart(inclusivity_plot)
+    st.caption('Data Source: https://theinclusiveinternet.eiu.com/')
 
-        plots.mlplot()
+    st.subheader('Machine Learning')
+    with st.expander('Predicting the relevance of the internet from its availability and affordability'):
+        model_result = plots.mlplot()
+        st.altair_chart(model_result)
+        st.write("With a strong, affordable, available internet comes a better online community that generates relevant content for the country/culture.")
 
 elif content_choice == "Rise of Social Media":
     # display relevant content

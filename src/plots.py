@@ -30,19 +30,22 @@ def barplot(data, x, y, x_label, y_label, color, column, tooltip_list, plot_titl
 def mlplot():
     df_viz = utils.get_ml_data()
 
-    st.write("We trained a Random Forests model - XGBoost and got very good scores in calculating the relevance of the internet from its availability and affordability ")
+    st.write("We trained a Random Forests model - XGBoost to predict the relevance of the internet given its availability and affordability")
+    st.write(
+        "The performance was just decent and suffered a hit after more extensive cleaning")
 
     affordability = alt.Chart(df_viz).mark_circle().encode(
         x='AFFORDABILITY',
         y='RELEVANCE',
         color='GROUP',
+        tooltip=['AFFORDABILITY', 'AVAILABILITY', 'RELEVANCE']
     ).interactive()
 
     availability = alt.Chart(df_viz).mark_circle().encode(
         x='AVAILABILITY',
         y='RELEVANCE',
         color='GROUP',
+        tooltip=['AFFORDABILITY', 'AVAILABILITY', 'RELEVANCE']
     ).interactive()
 
-    st.write("With a strong, affordable, available internet comes a better online community that generates relevant content for the country/culture")
-    return (affordability + availability)
+    return (affordability + availability) & affordability & availability
