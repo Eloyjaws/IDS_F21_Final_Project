@@ -9,3 +9,7 @@ def get_productivity_countries_list():
 
 def get_productivity_data():
     return pd.read_csv(DATA_DIR.joinpath('productivity/productivity.csv'))
+
+def get_ml_data():
+    return pd.read_csv(DATA_DIR.joinpath('ml/prediction_dataset.csv'))
+

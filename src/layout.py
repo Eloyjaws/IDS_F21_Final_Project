@@ -136,6 +136,36 @@ elif content_choice == "Internet: Trends and Impacts":
     with st.expander('Insert 3i plot here. Select 5 countries to view their internet inclusivity score'):
         st.write('Insert plot here')
 
+    st.subheader('Extra: ML Prediction')
+    with st.expander('Predicting relevance of the internet based on its affordability and availability'):
+        from sklearn.model_selection import train_test_split
+        from sklearn.inspection import permutation_importance
+        from sklearn.metrics import mean_squared_error, r2_score
+
+        import xgboost as xgb
+        from xgboost import XGBRegressor
+
+        data = utils.get_ml_data()
+        X = df_ml.iloc[:, [9, 12]]
+        y = df_ml.iloc[:, [14]]
+        
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=20)
+
+        # Init model
+        model = XGBRegressor(n_estimators=100)
+        # Fit model
+        model.fit(X_train, y_train)
+
+        y_pred = model.predict(X_test)
+
+        r2 = r2_score(y_test, y_pred)
+        mse = mean_squared_error(y_test, y_pred)
+        
+        st.write()
+
+        st.success('With a strong, affordable, available internet comes a better online community that generates relevant content for the country/culture')
+
+
 elif content_choice == "Rise of Social Media":
     # display relevant content
     st.write(content_choice)

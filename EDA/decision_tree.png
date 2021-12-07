@@ -1,0 +1,47 @@
+digraph {
+    graph [ rankdir=TB ]
+
+    0 [ label="AVAILABILITY<56.3000031" ]
+    0 -> 1 [label="yes, missing" color="#0000FF"]
+    0 -> 2 [label="no" color="#FF0000"]
+
+    1 [ label="AVAILABILITY<44.3499985" ]
+    1 -> 3 [label="yes, missing" color="#0000FF"]
+    1 -> 4 [label="no" color="#FF0000"]
+
+    3 [ label="AVAILABILITY<43.9000015" ]
+    3 -> 7 [label="yes, missing" color="#0000FF"]
+    3 -> 8 [label="no" color="#FF0000"]
+
+    7 [ label="AFFORDABILITY<51.4000015" ]
+    7 -> 11 [label="yes, missing" color="#0000FF"]
+    7 -> 12 [label="no" color="#FF0000"]
+
+    11 [ label="AFFORDABILITY<50.5999985" ]
+    11 -> 13 [label="yes, missing" color="#0000FF"]
+    11 -> 14 [label="no" color="#FF0000"]
+
+    13 [ label="leaf=5.61057091" ]
+
+    14 [ label="leaf=2.18364143" ]
+
+    12 [ label="leaf=7.06968021" ]
+
+    8 [ label="leaf=2.67222881" ]
+
+    4 [ label="leaf=8.62203026" ]
+
+    2 [ label="AVAILABILITY<68.9000015" ]
+    2 -> 5 [label="yes, missing" color="#0000FF"]
+    2 -> 6 [label="no" color="#FF0000"]
+
+    5 [ label="AFFORDABILITY<58.0999985" ]
+    5 -> 9 [label="yes, missing" color="#0000FF"]
+    5 -> 10 [label="no" color="#FF0000"]
+
+    9 [ label="leaf=4.15118933" ]
+
+    10 [ label="leaf=9.97865009" ]
+
+    6 [ label="leaf=11.9536829" ]
+}
