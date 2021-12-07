@@ -301,7 +301,7 @@ Footer = """ <style>
     </p>
     <p>
         <a class='submission' href='https://github.com/Eloyjaws/IDS_F21_Final_Project' target='_blank'> Github</a> | 
-        <a class='submission' href='https://github.com/Eloyjaws/IDS_F21_Final_Project' target='_blank'> Video Recording</a>
+        <a class='submission' href='https://www.youtube.com/watch?v=9QphdshAUHo' target='_blank'> Video Recording</a>
     </p>
     </div>
     """
