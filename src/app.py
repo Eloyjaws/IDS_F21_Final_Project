@@ -1,19 +1,18 @@
+from pathlib import Path
+import utils
+import plots
+import text
+from PIL import Image
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import streamlit.components.v1 as components
+import streamlit as st
 import sys
 # from src.app import ROOT_DIR
 sys.path.append("..")
 
-import streamlit as st
-import streamlit.components.v1 as components
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from PIL import Image
-
-import text
-import plots
-import utils
-from pathlib import Path
 
 ROOT_DIR = Path(__file__).parent.parent.resolve()
 # Use Wide Page Format
@@ -41,14 +40,15 @@ if content_choice == "Intro":
     st.image(title_img)
     st.title("Social Connections & the Internet")
     st.markdown(text.Introduction, unsafe_allow_html=True)
-    
+
 elif content_choice == "Social Connections":
     # display relevant content
     st.header("How Important are Social Connections for our health?")
     st.markdown(text.social_connections_blurb_one, unsafe_allow_html=True)
     st.video("https://www.youtube.com/watch?v=8KkKuTCFvzI")
     st.write(text.social_connections_blurb_two)
-    happiness_image = Image.open(ROOT_DIR.joinpath("images/happiness-and-friends.png"))
+    happiness_image = Image.open(ROOT_DIR.joinpath(
+        "images/happiness-and-friends.png"))
     st.image(happiness_image)
 
     st.subheader('Impact of Connections on Job Seeking')
@@ -72,7 +72,8 @@ elif content_choice == "Social Connections":
         selected_entities = st.multiselect(
             label="Select interested economic entities for comparison",
             options=utils.get_productivity_countries_list(),
-            default=["United States", "Japan", "South Africa", "Australia", "China", "Spain", "Brazil"]
+            default=["United States", "Japan", "South Africa",
+                     "Australia", "China", "Spain", "Brazil"]
         )
 
         # Fetch Data
@@ -80,7 +81,8 @@ elif content_choice == "Social Connections":
         productivity_df = productivity_data.copy()
 
         if selected_entities:
-            productivity_filtered = productivity_df[productivity_df["Entity"].isin(selected_entities)].rename(columns={"Productivity (PWT 9.1 (2019))":"Productivity"})
+            productivity_filtered = productivity_df[productivity_df["Entity"].isin(
+                selected_entities)].rename(columns={"Productivity (PWT 9.1 (2019))": "Productivity"})
             productivity_plot = plots.lineplot(
                 productivity_filtered,
                 'Year',
@@ -111,12 +113,13 @@ elif content_choice == "Internet: Trends and Impacts":
         components.html(
             '<div class="flourish-embed flourish-chart" data-src="visualisation/8040586"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
-    st.subheader('Is there a Relationship between Internet User Population and GNI per capital of countries?')
+    st.subheader(
+        'Is there a Relationship between Internet User Population and GNI per capital of countries?')
     st.write(text.internet_usage_gni)
     with st.expander('Click to read more on Internet User Population and GNI per capital of countries?'):
         components.html(
-        '<div class="flourish-embed flourish-scatter" data-src="visualisation/8020581"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
-    
+            '<div class="flourish-embed flourish-scatter" data-src="visualisation/8020581"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
+
     st.subheader('Is the Internet usage really Inclusive?')
     st.write(text.internet_inclusivity_index)
     with st.expander('Comparison of Internet Inclusivity Amongst Countries'):
@@ -126,10 +129,11 @@ elif content_choice == "Internet: Trends and Impacts":
         selected_countries = st.multiselect(
             label="Select ONLY 4 countries to view their internet inclusivity score.",
             options=countries_,
-            default=["United States", "China", "South Africa", "Australia",]
+            default=["United States", "China", "South Africa", "Australia", ]
         )
         if selected_countries:
-            internet_inclusivity_filtered = internet_inclusivity_df[internet_inclusivity_df["Country"].isin(selected_countries[:4])]
+            internet_inclusivity_filtered = internet_inclusivity_df[internet_inclusivity_df["Country"].isin(
+                selected_countries[:4])]
             inclusivity_plot = plots.barplot(
                 internet_inclusivity_filtered,
                 'Internet_3i_metric',
@@ -144,6 +148,8 @@ elif content_choice == "Internet: Trends and Impacts":
 
         st.altair_chart(inclusivity_plot)
 
+        plots.mlplot()
+
 elif content_choice == "Rise of Social Media":
     # display relevant content
     st.header('Rise of Social Media - Trends and Stats')
@@ -155,11 +161,11 @@ elif content_choice == "Rise of Social Media":
         Social\ Connectedness_{i,j} = \frac{FB\_Connections_{i,j}}{FB\_Users_i * FB\_Users_j}
     ''')
     st.latex(r'''FB\_Users_i\ and\ FB\_Users_j\ are\ number\ of\ Facebook\ users\ in\ locations\ i\ and\ j''')
-    st.latex(r'''FB\_Connections_{i,j}\ is\ the\ number\ of\ connections\ between\ the\ two\ locations''')
+    st.latex(
+        r'''FB\_Connections_{i,j}\ is\ the\ number\ of\ connections\ between\ the\ two\ locations''')
     components.html(
         '<div class="flourish-embed flourish-globe" data-src="visualisation/8038403"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=650)
     st.write(text.social_connectednes_blurb_two)
-    
 
     # MAU for Social Media Platform (2002 - 2018)
     st.subheader("Online Social Networking Trends amongst Young Users")
@@ -195,7 +201,8 @@ elif content_choice == "Loneliness":
             '<div class="flourish-embed flourish-map" data-src="visualisation/7989899"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
 
     # One-Person Household
-    st.subheader('One-Person Household, GDP per Capita & Increasing Loneliness')
+    st.subheader(
+        'One-Person Household, GDP per Capita & Increasing Loneliness')
     with st.expander('Click to view insight'):
         st.write(text.loneliness_single_person_household_impact_blurb_one)
         components.html(
@@ -206,7 +213,8 @@ elif content_choice == "Loneliness":
     st.subheader('Social Media Usage & Loneliness and Happiness')
     with st.expander('Click to view insight'):
         st.write(text.loneliness_social_media_blurb)
-        smt_happy_img = Image.open(ROOT_DIR.joinpath("images/social_media_time_happy.png"))
+        smt_happy_img = Image.open(ROOT_DIR.joinpath(
+            "images/social_media_time_happy.png"))
         st.image(smt_happy_img)
 
 elif content_choice == "Conclusion":
