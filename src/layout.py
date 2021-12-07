@@ -96,29 +96,11 @@ elif content_choice == "Social Connections":
 
 elif content_choice == "Internet: Trends and Impacts":
     # display relevant content
-    # st.header('Internet: Trends and Impacts')
     st.header("The Internet usage across the world - A brief story")
     components.html(
-        '<div class="flourish-embed" data-src="story/1056561"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=750)
+        '<div class="flourish-embed" data-src="story/1056561"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=700)
 
     st.subheader('Internet Usage Trends')
-    # with st.expander('Internet Users in Millions'):
-    #     components.html(
-    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016698"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
-    #     components.html(
-    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016738"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
-    # with st.expander('Internet Users by Share of Population'):
-    #     components.html(
-    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016719"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
-    #     components.html(
-    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016758"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
-
-    # with st.expander('Offline Statistics'):
-    #     components.html(
-    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016773"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
-    #     components.html(
-    #     '<div class="flourish-embed flourish-scatter" data-src="visualisation/8016831"><script src="https://public.flourish.studio/resources/embed.js"></script></div>', height=600)
-
     with st.expander("Click for insight on Daily time spent on the Internet by young people, 2016"):
         st.write(text.internet_daily_time_spent)
         components.html(
@@ -137,8 +119,30 @@ elif content_choice == "Internet: Trends and Impacts":
     
     st.subheader('Is the Internet usage really Inclusive?')
     st.write(text.internet_inclusivity_index)
-    with st.expander('Insert 3i plot here. Select 5 countries to view their internet inclusivity score'):
-        st.write('Insert plot here')
+    with st.expander('Comparison of Internet Inclusivity Amongst Countries'):
+        # Comparison of Internet Inclusivity Amongst Countries
+        country_list, internet_inclusivity = utils.get_inclusivity_data()
+        countries_, internet_inclusivity_df = country_list.copy(), internet_inclusivity.copy()
+        selected_countries = st.multiselect(
+            label="Select ONLY 4 countries to view their internet inclusivity score.",
+            options=countries_,
+            default=["United States", "China", "South Africa", "Australia",]
+        )
+        if selected_countries:
+            internet_inclusivity_filtered = internet_inclusivity_df[internet_inclusivity_df["Country"].isin(selected_countries[:4])]
+            inclusivity_plot = plots.barplot(
+                internet_inclusivity_filtered,
+                'Internet_3i_metric',
+                'Internet_3i_score',
+                'Inclusivity Metrics',
+                'Internet Inclusivity Scores',
+                'Internet_3i_metric',
+                'Country',
+                ['Internet_3i_metric', 'Internet_3i_score'],
+                'Internet Inclusivity Comparison Amongst Countries',
+            )
+
+        st.altair_chart(inclusivity_plot)
 
 elif content_choice == "Rise of Social Media":
     # display relevant content
@@ -207,7 +211,6 @@ elif content_choice == "Loneliness":
 
 elif content_choice == "Conclusion":
     # display relevant content
-    # st.write(content_choice)
     st.header("Conclusion")
     st.write(text.Conclusion)
 

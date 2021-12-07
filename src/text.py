@@ -268,7 +268,9 @@ References = """
                 
                 - Facebook's Social Connectedness Index from https://dataforgood.facebook.com/dfg/docs/methodology-social-connectedness-index
 
-                - OurWorld's data and visualizations from https://ourworldindata.org/social-connections-and-loneliness
+                - OurWorld's datasets and visualizations from https://ourworldindata.org/social-connections-and-loneliness
+
+                - Inclusive Internet Index from https://theinclusiveinternet.eiu.com/
 
                 - Social Media / Screen time stats from https://www.comparitech.com/tv-streaming/screen-time-statistics/
 
